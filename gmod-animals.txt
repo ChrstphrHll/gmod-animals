@@ -1,0 +1,7 @@
+"superkillers"
+{
+	"base"		"base"
+	"title"		"Animals"
+	"maps"		""
+	"menusystem"	"1"
+}
