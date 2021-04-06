@@ -10,3 +10,11 @@ function GM:PlayerSpawn(ply)
     ply:SetWalkSpeed(30)
     ply:Give("weapon_physgun")
 end
+
+function GM:OnNPC(npc, attacker, inflictor)
+    
+end
+
+function GM:PlayerDeath(player, inflictor, attacker)
+
+end
