@@ -1,5 +1,3 @@
-print('please')
-
 Account = { balance=0,
             withdraw = function (self, v)
                             self.balance = self.balance - v
@@ -18,13 +16,18 @@ function Account:new (o)
     return o
 end
 
+
 Animal = {
     walkSpeed = 100,
     runSpeed = 1000
 }
 
-a = Account:new()
-print(a.balance)
-a:deposit(1000)
-print(a.balance)
-print(a.neat)
+function Animal:new (o)
+    o = o or {}
+    setmetatable(o, self)
+    self.__index = self
+    return o
+
+baseAnimal = Animal:new()
+print(baseAnimal.walkSpeed)
+print(baseAnimal.runSpeed)
