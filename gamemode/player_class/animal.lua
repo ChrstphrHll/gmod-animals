@@ -40,6 +40,7 @@ function Animal:setPlayer (ply)
     ply:SetMaxHealth(self.MaxHealth)
     ply:SetRunSpeed(self.RunSpeed)
     ply:SetWalkSpeed(self.WalkSpeed)
+    ply:SetJumpPower(self.JumpPower)
 end
 
 function Animal:new (o)
@@ -50,5 +51,5 @@ function Animal:new (o)
 end
 
 baseAnimal = Animal:new()
-print(baseAnimal.walkSpeed)
-print(baseAnimal.runSpeed)
+print(baseAnimal.WalkSpeed)
+print(baseAnimal.RunSpeed)
