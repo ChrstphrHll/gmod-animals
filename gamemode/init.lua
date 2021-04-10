@@ -4,7 +4,7 @@ AddCSLuaFile("shared.lua")
 include("shared.lua")
 
 function GM:PlayerSpawn(ply)
-    ply:SetGravity(.80)
+    ply:SetGravity(0)
     ply:SetMaxHealth(104)
     ply:SetRunSpeed(500)
     ply:SetWalkSpeed(30)
