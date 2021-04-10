@@ -20,6 +20,6 @@ function GM:PlayerDeath(player, inflictor, attacker)
 end
 
 function GM:PlayerSpawn(ply)
-    Say('hellow world', boolean teamOnly=false)
+    Say('hellow world')
     player_manager.SetPlayerClass( ply, "player_default" )
 end
