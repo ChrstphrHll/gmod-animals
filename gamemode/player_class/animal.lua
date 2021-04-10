@@ -27,6 +27,7 @@ function Animal:new (o)
     setmetatable(o, self)
     self.__index = self
     return o
+end
 
 baseAnimal = Animal:new()
 print(baseAnimal.walkSpeed)
