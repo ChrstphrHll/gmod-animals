@@ -18,7 +18,7 @@ end
 
 
 Animal = {
-    DisplayName = 'Animal'
+    DisplayName = 'Animal',
     WalkSpeed = 400,
     RunSpeed = 600,
     CrouchedWalkSpeed = 0.3,
