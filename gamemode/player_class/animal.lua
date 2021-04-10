@@ -20,5 +20,9 @@ Animal = {
     walkSpeed = 100,
     runSpeed = 1000
 }
-a = Animal
-print(a.walkSpeed .. a.runSpeed)
+
+a = Account:new()
+print(a.balance)
+a:deposit(1000)
+print(a.balance)
+print(a.neat)
