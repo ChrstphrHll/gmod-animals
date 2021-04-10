@@ -19,3 +19,5 @@ DEFINE_BASECLASS( "player_default" )
  end
  
  player_manager.RegisterClass( "player_custom", PLAYER, "player_default" )
+
+ print('loaded animal')
