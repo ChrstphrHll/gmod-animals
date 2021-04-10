@@ -18,3 +18,7 @@ end
 function GM:PlayerDeath(player, inflictor, attacker)
 
 end
+
+function GM:PlayerSpawn(ply)
+    player_manager.SetPlayerClass( ply, "player_default" )
+end
