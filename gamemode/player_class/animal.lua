@@ -21,4 +21,4 @@ Animal = {
     runSpeed = 1000
 }
 a = Animal
-print(a.walkSpeed .. b.runSpeed)
+print(a.walkSpeed .. a.runSpeed)
