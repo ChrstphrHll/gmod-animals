@@ -3,6 +3,7 @@ AddCSLuaFile("shared.lua")
 AddCSLuaFile("player_class/animal.lua")
 
 include("shared.lua")
+include("player_class/animal.lua")
 
 function GM:PlayerSpawn(ply)
     -- ply:SetGravity(0)
