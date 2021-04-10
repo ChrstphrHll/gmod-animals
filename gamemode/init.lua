@@ -6,6 +6,8 @@ include("shared.lua")
 include("player_class/animal.lua")
 
 function GM:PlayerSpawn(ply)
+    ply:Say('huh? world')
+    player_manager.SetPlayerClass( ply, "player_custom" )
     -- ply:SetGravity(0)
     -- ply:SetMaxHealth(104)
     -- ply:SetRunSpeed(500)
@@ -19,9 +21,4 @@ end
 
 function GM:PlayerDeath(player, inflictor, attacker)
 
-end
-
-function GM:PlayerSpawn(ply)
-    ply:Say('hellow world')
-    player_manager.SetPlayerClass( ply, "player_custom" )
 end
