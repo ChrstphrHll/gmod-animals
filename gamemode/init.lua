@@ -6,9 +6,7 @@ include("shared.lua")
 function GM:PlayerSpawn(ply)
     ply:Say('huh? world')
     ply:SetGravity(0.8)
-    ply:SetMaxHealth(104)
-    ply:SetRunSpeed(baseAnimal.runSpeed)
-    ply:SetWalkSpeed(baseAnimal.walkSpeed)
+    baseAnimal:setPlayer(ply)
     ply:Give("weapon_physgun")
 end
 

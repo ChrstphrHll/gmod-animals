@@ -18,9 +18,29 @@ end
 
 
 Animal = {
-    walkSpeed = 100,
-    runSpeed = 1000
+    DisplayName = 'Animal'
+    WalkSpeed = 400,
+    RunSpeed = 600,
+    CrouchedWalkSpeed = 0.3,
+    DuckSpeed = 0.3,
+    UnDuckSpeed = 0.3,
+    JumpPower = 2000,
+    CanUseFlashlight = false,
+    MaxHealth = 100,
+    MaxArmor = 0,
+    StartHealth = 100,
+    StartArmor = 0,
+    DropWeaponOnDie = false,
+    TeammateNoCollide = true,
+    AvoidPlayers = true,
+    UseVMHands = true
 }
+
+function Animal:setPlayer (ply)
+    ply:SetMaxHealth(self.MaxHealth)
+    ply:SetRunSpeed(self.RunSpeed)
+    ply:SetWalkSpeed(self.WalkSpeed)
+end
 
 function Animal:new (o)
     o = o or {}
