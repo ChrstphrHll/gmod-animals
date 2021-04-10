@@ -6,7 +6,7 @@ DEFINE_BASECLASS( "player_default" )
  -- See gamemodes/base/player_class/player_default.lua for all overridable variables
  --
  PLAYER.WalkSpeed = 0
- PLAYER.RunSpeed  = 400
+ PLAYER.RunSpeed  = 1000
  
  
  function PLAYER:Loadout()
