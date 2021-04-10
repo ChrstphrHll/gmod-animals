@@ -1,9 +1,7 @@
 AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
-AddCSLuaFile("player_class/animal.lua")
 
 include("shared.lua")
-include("player_class/animal.lua")
 
 function GM:PlayerSpawn(ply)
     ply:Say('huh? world')
