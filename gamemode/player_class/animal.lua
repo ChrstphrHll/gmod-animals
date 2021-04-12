@@ -24,7 +24,7 @@ Animal = {
     CrouchedWalkSpeed = 0.3,
     DuckSpeed = 0.3,
     UnDuckSpeed = 0.3,
-    JumpPower = 2000,
+    JumpPower = 200,
     CanUseFlashlight = false,
     MaxHealth = 100,
     MaxArmor = 0,
@@ -41,6 +41,7 @@ function Animal:setPlayer (ply)
     ply:SetRunSpeed(self.RunSpeed)
     ply:SetWalkSpeed(self.WalkSpeed)
     ply:SetJumpPower(self.JumpPower)
+    ply:SetCrouchedWalkSpeed(self.CrouchedWalkSpeed)
 end
 
 function Animal:new (o)
