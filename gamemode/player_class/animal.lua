@@ -1,22 +1,3 @@
-Account = { balance=0,
-            withdraw = function (self, v)
-                            self.balance = self.balance - v
-                        end,
-            neat = 13
-            }
-
-function Account:deposit (v)
-    self.balance = self.balance + v
-end
-
-function Account:new (o)
-    o = o or {}   -- create object if user does not provide one
-    setmetatable(o, self)
-    self.__index = self
-    return o
-end
-
-
 Animal = {
     DisplayName = 'Animal',
     WalkSpeed = 400,
@@ -42,6 +23,11 @@ function Animal:setPlayer (ply)
     ply:SetWalkSpeed(self.WalkSpeed)
     ply:SetJumpPower(self.JumpPower)
     ply:SetCrouchedWalkSpeed(self.CrouchedWalkSpeed)
+    ply:SetDuckSpeed(self.DuckSpeed)
+end
+
+function Animal:loadout (ply)
+
 end
 
 function Animal:new (o)
@@ -52,5 +38,6 @@ function Animal:new (o)
 end
 
 baseAnimal = Animal:new()
+cheeta = Animal:new({RunSpeed = 1000})
 print(baseAnimal.WalkSpeed)
 print(baseAnimal.RunSpeed)
