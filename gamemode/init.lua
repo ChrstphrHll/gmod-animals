@@ -5,18 +5,7 @@ AddCSLuaFile("testhud.lua")
 include("shared.lua")
 include("testhud.lua")
 
-local hide = {
-	["CHudHealth"] = true,
-	["CHudBattery"] = true
-}
 
-hook.Add( "HUDShouldDraw", "HideHUD", function( name )
-	if ( hide[ name ] ) then
-		return false
-	end
-
-	-- Don't return anything here, it may break other addons that rely on this hook.
-end )
 
 function GM:PlayerSpawn(ply)
     ply:Say('huh? world')
