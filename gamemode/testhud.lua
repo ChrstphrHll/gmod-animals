@@ -79,3 +79,5 @@ function HideHud(name)
 	end
 end
 hook.Add("HUDShouldDraw","HidedefaultHud", HideHud)
+
+print('hud is here')
