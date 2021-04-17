@@ -50,7 +50,9 @@ function GM:Initialize()
     
         -- hud box for current Animal type
         draw.RoundedBox(0,0, ScrH() - 200, 250, 100, Color(30,30,30,150))
-        draw.SimpleText("Current Animal: ".. client:getNWString('currentAnimal'), "DermaDefaultBold", 10, ScrH() - 190, Color(5,255,255,255), 0, 0)
+        if (client:getNWString('currentAnimal')) then
+            draw.SimpleText("Current Animal: ".. client:getNWString('currentAnimal'), "DermaDefaultBold", 10, ScrH() - 190, Color(5,255,255,255), 0, 0)
+        end
 
     end
     hook.Add("HUDPaint","TestHud",HUD)
