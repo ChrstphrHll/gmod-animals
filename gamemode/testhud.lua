@@ -38,10 +38,9 @@ local client = LocalPlayer()
     draw.SimpleText("Armor: ".. client:Armor().."%", "DermaDefaultBold", 10, ScrH() - 50, Color(5,255,255,255), 0, 0)
 
     -- hud box for current Animal type
-    draw.RoundedBox(0,0, ScrH() - 200, 250, 100, Color(30,30,30,150))
-    if (client:getNWString('currentAnimal')) then
-        draw.SimpleText("Current Animal: ".. client:getNWString('currentAnimal'), "DermaDefaultBold", 10, ScrH() - 190, Color(5,255,255,255), 0, 0)
-    end
+    draw.RoundedBox(0,0, ScrH() - 200, 250, 90, Color(30,30,30,150))
+    draw.SimpleText("Current Animal: ", "DermaDefaultBold", 10, ScrH() - 190, Color(5,255,255,255), 0, 0)
+    
 
 end
 hook.Add("HUDPaint","TestHud",HUD)
