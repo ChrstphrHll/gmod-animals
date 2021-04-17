@@ -24,6 +24,7 @@ function Animal:setPlayer (ply)
     ply:SetJumpPower(self.JumpPower)
     ply:SetCrouchedWalkSpeed(self.CrouchedWalkSpeed)
     ply:SetDuckSpeed(self.DuckSpeed)
+    ply:SetNWString('currnetAnimal', self.DisplayName)
 end
 
 function Animal:loadout (ply)
