@@ -25,6 +25,7 @@ function Animal:setPlayer (ply)
     ply:SetCrouchedWalkSpeed(self.CrouchedWalkSpeed)
     ply:SetDuckSpeed(self.DuckSpeed)
     ply:SetNWString('currnetAnimal', self.DisplayName)
+    ply:SetModelScale( ent:GetModelScale() * 1.25, 0 )
 end
 
 function Animal:loadout (ply)
