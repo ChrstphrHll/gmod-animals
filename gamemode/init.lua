@@ -6,7 +6,7 @@ include("shared.lua")
 include("testhud.lua")
 
 function GM:PlayerInitialSpawn(ply)
-	ply:SetNWString("currentAnimal", "null")
+	ply:SetNWString("currentAnimal", "nujkuyjhgfdhjkll")
 end
 
 function GM:PlayerSpawn(ply)
