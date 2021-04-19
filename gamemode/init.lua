@@ -5,9 +5,9 @@ AddCSLuaFile("testhud.lua")
 include("shared.lua")
 include("testhud.lua")
 
-function GM:PlayerInitialSpawn(ply)
-	ply:SetNWString("currentAnimal", "nujkuyjhgfdhjkll")
-end
+-- function GM:PlayerInitialSpawn(ply)
+-- 	ply:SetNWString("currentAnimal", "nujkuyjhgfdhjkll")
+-- end
 
 function GM:PlayerSpawn(ply)
     ply:Say('huh? world')
