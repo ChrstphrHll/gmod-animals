@@ -30,7 +30,7 @@ function Animal:setPlayer (ply)
     print(ply)
     ply:SetNWString('currnetAnimal', self.DisplayName)
     ply:SetModelScale( 1, 0 )
-    timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, self:handleKarma(ply) )
+    timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function self:handleKarma(ply) end)
 
 
 end
