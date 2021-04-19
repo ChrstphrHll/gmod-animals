@@ -29,12 +29,17 @@ function Animal:setPlayer (ply)
     //todo: figure out whats wrong with setNWSTRing
     print(ply)
     ply:SetNWString('currnetAnimal', self.DisplayName)
-    print(ply:GetNWString( 'currentAnimal' ))
     ply:SetModelScale( 1, 0 )
-    timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function() ply:Kill() end )
+    timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, self:handleKarma(ply) )
 
 
 end
+
+function Animal:handleKarma(ply)
+    print(ply:GetNWString( 'currentAnimal' ))
+    print(ply:GetNWInt('karma'))
+    ply:Kill()
+end 
 
 function Animal:loadout (ply)
 
