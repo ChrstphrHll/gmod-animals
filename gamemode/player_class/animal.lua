@@ -25,10 +25,11 @@ function Animal:setPlayer (ply)
     ply:SetJumpPower(self.JumpPower)
     ply:SetCrouchedWalkSpeed(self.CrouchedWalkSpeed)
     ply:SetDuckSpeed(self.DuckSpeed)
+    print(sefl.DisplayName)
     ply:SetNWString('currnetAnimal', self.DisplayName)
     print(ply:GetNWString( 'currentAnimal' ))
-    ply:SetModelScale( 5.0, 0 )
-    
+    ply:SetModelScale( 1, 0 )
+
 end
 
 function Animal:loadout (ply)
