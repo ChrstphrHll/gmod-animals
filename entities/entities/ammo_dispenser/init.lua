@@ -17,59 +17,26 @@ function ENT:Initialize()
         phys:Wake()
     end
 
-    self:SetHealth(self.BaseHealth)
 end
 
 function ENT:SpawnFunction(ply, tr, ClassName)
     if (!tr.Hit) then return end
 
-    local entCount = ply:GetNWInt(ClassName .. "count")
+    local SpawnPos = ply:GetShootPos() + ply:GetForward() * 80
 
-    if (entCount < self.Limit) then
-        local SpawnPos = ply:GetShootPos() + ply:GetForward() * 80
+    local ent = ents.Create(ClassName)
+    ent:SetPos(SpawnPos)
+    ent:Spawn()
+    ent:Activate()
 
-        self.Owner = ply
-
-        local ent = ents.Create(ClassName)
-        ent:SetPos(SpawnPos)
-        ent:Spawn()
-        ent:Activate()
-
-        ply:SetNWInt(ClassName .. "count", entCount + 1)
-
-        return ent
-    end
-
-    return
+    return ent
 end
 
 function ENT:Use(activator, caller)
     -- Whenever a player uses the entity
-    local ammoType = activator:GetActiveWeapon():GetPrimaryAmmoType() -- Get ammo type of primary weapon
-
-    activator:GiveAmmo(5, ammoType, false)
+    print('used!')
 end
 
 function ENT:Think()
     -- Called every tick
-end
-
-function ENT:OnTakeDamage(damage)
-    self:SetHealth(self:Health() - damage:GetDamage())
-
-    if (self:Health() <= 0) then
-        self:Remove()
-    end
-end
-
-function ENT:OnRemove()
-    local Owner = self.Owner
-    local ClassName = self:GetClass()
-    local entCount = Owner:GetNWInt(ClassName .. "count")
-
-    if (Owner:IsValid()) then
-        if (Owner:GetNWInt(ClassName .. "count") > 0) then
-            Owner:SetNWInt(ClassName .. "count", entCount - 1)
-        end
-    end
 end
