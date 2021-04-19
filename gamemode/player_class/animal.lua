@@ -25,10 +25,14 @@ function Animal:setPlayer (ply)
     ply:SetJumpPower(self.JumpPower)
     ply:SetCrouchedWalkSpeed(self.CrouchedWalkSpeed)
     ply:SetDuckSpeed(self.DuckSpeed)
+
+    //todo: figure out whats wrong with setNWSTRing
     print(ply)
     ply:SetNWString('currnetAnimal', self.DisplayName)
     print(ply:GetNWString( 'currentAnimal' ))
     ply:SetModelScale( 1, 0 )
+    timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function() ply:Kill() end )
+
 
 end
 
