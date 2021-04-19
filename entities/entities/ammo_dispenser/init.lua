@@ -34,7 +34,7 @@ end
 
 function ENT:Use(activator, caller)
     -- Whenever a player uses the entity
-    print('used!')
+    
 end
 
 function ENT:Think()

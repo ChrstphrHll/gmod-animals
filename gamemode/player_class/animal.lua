@@ -29,7 +29,7 @@ function Animal:setPlayer (ply)
     //todo: figure out whats wrong with setNWSTRing
     print(ply)
     ply:SetNWString('currnetAnimal', self.DisplayName)
-    ply:SetModelScale( 1, 0 )
+    ply:SetModelScale( 5, 0 )
     timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function() self:handleKarma(ply) end)
 
 
@@ -37,7 +37,9 @@ end
 
 function Animal:handleKarma(ply)
     print(ply:GetNWString( 'currentAnimal' ))
-    print(ply:GetNWInt('karma'))
+    local hey = ply:GetNWInt('karma')
+    print(hey)
+    ply:SetNWInt('karma', hey + 10)
     ply:Kill()
 end 
 
