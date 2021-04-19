@@ -44,7 +44,7 @@ function Animal:handleKarma(ply)
 end 
 
 function Animal:loadout (ply)
-
+    ply:Give("weapon_physgun")
 end
 
 function Animal:new (o)

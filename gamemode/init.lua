@@ -14,7 +14,7 @@ function GM:PlayerSpawn(ply)
     ply:Say('huh? world')
     ply:SetGravity(0.8)
     baseAnimal:setPlayer(ply)
-    ply:Give("weapon_physgun")
+    baseAnimal:loadout(ply)
 end
 
 function GM:OnNPC(npc, attacker, inflictor)
