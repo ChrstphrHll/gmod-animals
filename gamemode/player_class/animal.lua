@@ -14,6 +14,7 @@ Animal = {
     DropWeaponOnDie = false,
     TeammateNoCollide = true,
     AvoidPlayers = true,
+    Lifespan = 10,
     UseVMHands = true
 }
 
@@ -25,7 +26,9 @@ function Animal:setPlayer (ply)
     ply:SetCrouchedWalkSpeed(self.CrouchedWalkSpeed)
     ply:SetDuckSpeed(self.DuckSpeed)
     ply:SetNWString('currnetAnimal', self.DisplayName)
+    print(ply:GetNWString( 'currentAnimal' ))
     ply:SetModelScale( 5.0, 0 )
+    
 end
 
 function Animal:loadout (ply)
