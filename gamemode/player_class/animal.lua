@@ -20,18 +20,21 @@ Animal = {
 }
 
 function Animal:extraSet(ply)
+    --fuction to set any extra parameters outside of baseanimal
 
 end
 
-function Animal:specialAbility()
+function Animal:specialAbility(forPlayer)
     hook.Add( "PlayerButtonDown", "PlayerButtonDownWikiExample", function( ply, button )
-        if (button == 17) then --if player clicks 17
+        if (button == 17 and forPlayer == ply) then --if player clicks 17
+            --add specific things to be done upon g press here
             print( ply:Nick() .. " pressed " .. button )
         end
     end)
 end 
 
 function Animal:setPlayer (ply)
+    --function that sets all the properties of a player
     ply:SetMaxHealth(self.MaxHealth)
     ply:SetRunSpeed(self.RunSpeed)
     ply:SetWalkSpeed(self.WalkSpeed)
@@ -39,14 +42,15 @@ function Animal:setPlayer (ply)
     ply:SetCrouchedWalkSpeed(self.CrouchedWalkSpeed)
     ply:SetDuckSpeed(self.DuckSpeed)
 
-    //todo: figure out whats wrong with setNWSTRing
-    print(ply)
     ply:SetNWString('currentAnimal', self.DisplayName)
     ply:SetModelScale( self.Size, 0 )
     timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function() self:handleKarma(ply) end)
 
     self:extraSet(ply)
-    self:specialAbility()
+    self:specialAbility(ply)
+
+    //TODO: add setting models
+
 end
 
 // We're actually dealing with karma stuff here?
