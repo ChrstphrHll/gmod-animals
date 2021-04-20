@@ -23,7 +23,7 @@ function Animal:extraSet(ply)
 
 end
 
-function Animal:specialAbility(ply)
+function Animal:specialAbility()
     hook.Add( "PlayerButtonDown", "PlayerButtonDownWikiExample", function( ply, button )
         if (button == 17) then --if player clicks 17
             print( ply:Nick() .. " pressed " .. button )
@@ -46,6 +46,7 @@ function Animal:setPlayer (ply)
     timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function() self:handleKarma(ply) end)
 
     self:extraSet(ply)
+    self:specialAbility()
 end
 
 // We're actually dealing with karma stuff here?
