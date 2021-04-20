@@ -44,6 +44,7 @@ function Animal:setPlayer (ply)
     self:extraSet(ply)
 end
 
+// We're actually dealing with karma stuff here?
 function Animal:handleKarma(ply)
     print(ply:GetNWString( 'currentAnimal' ))
     local hey = ply:GetNWInt('karma')
