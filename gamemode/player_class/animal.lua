@@ -24,7 +24,11 @@ function Animal:extraSet(ply)
 end
 
 function Animal:specialAbility(ply)
-    print(self.DisplayName .. ' doesn\' have a special ability')
+    hook.Add( "PlayerButtonDown", "PlayerButtonDownWikiExample", function( ply, button )
+        if (button == 17) then --if player clicks 17
+            print( ply:Nick() .. " pressed " .. button )
+        end
+    end)
 end 
 
 function Animal:setPlayer (ply)
