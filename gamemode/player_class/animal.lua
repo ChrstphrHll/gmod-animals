@@ -15,12 +15,17 @@ Animal = {
     TeammateNoCollide = true,
     AvoidPlayers = true,
     Lifespan = 10,
+    Size = 1,
     UseVMHands = true
 }
 
 function Animal:extraSet(ply)
 
 end
+
+function Animal:specialAbility(ply)
+    print(self.DisplayName .. ' doesn\' have a special ability')
+end 
 
 function Animal:setPlayer (ply)
     ply:SetMaxHealth(self.MaxHealth)
@@ -33,7 +38,7 @@ function Animal:setPlayer (ply)
     //todo: figure out whats wrong with setNWSTRing
     print(ply)
     ply:SetNWString('currentAnimal', self.DisplayName)
-    ply:SetModelScale( 5, 0 )
+    ply:SetModelScale( self.Size, 0 )
     timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function() self:handleKarma(ply) end)
 
     self:extraSet(ply)
