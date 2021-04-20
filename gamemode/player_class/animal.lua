@@ -18,6 +18,10 @@ Animal = {
     UseVMHands = true
 }
 
+function Animal:extraSet(ply)
+
+end
+
 function Animal:setPlayer (ply)
     ply:SetMaxHealth(self.MaxHealth)
     ply:SetRunSpeed(self.RunSpeed)
@@ -28,11 +32,11 @@ function Animal:setPlayer (ply)
 
     //todo: figure out whats wrong with setNWSTRing
     print(ply)
-    ply:SetNWString('currnetAnimal', self.DisplayName)
+    ply:SetNWString('currentAnimal', self.DisplayName)
     ply:SetModelScale( 5, 0 )
     timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function() self:handleKarma(ply) end)
 
-
+    self:extraSet(ply)
 end
 
 function Animal:handleKarma(ply)
