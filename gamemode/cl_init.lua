@@ -6,7 +6,7 @@ net.Receive("f4menu", function()
 
     if (!Frame) then
         local Frame = vgui.Create( "DFrame" )
-        Frame:SetTitle( "Test panel" )
+        Frame:SetTitle( "Karma Store" )
         Frame:SetSize( 300,300 )
         Frame:Center()			
         Frame:MakePopup()
@@ -24,6 +24,17 @@ net.Receive("f4menu", function()
         end
         Button.DoClick = function()
             print( "I was clicked!" )
+        end
+
+        local DComboBox = vgui.Create( "DComboBox", Frame )
+        DComboBox:SetPos( 5, 30 )
+        DComboBox:SetSize( 100, 20 )
+        DComboBox:SetValue( "options" )
+        DComboBox:AddChoice( "option A" )
+        DComboBox:AddChoice( "option B" )
+        DComboBox:AddChoice( "option C" )
+        DComboBox.OnSelect = function( self, index, value )
+            print( value .." was selected at index " .. index )
         end
 
         Frame:SetDeleteOnClose( true )
