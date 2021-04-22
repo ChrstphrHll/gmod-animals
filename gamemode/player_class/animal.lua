@@ -16,6 +16,7 @@ Animal = {
     AvoidPlayers = true,
     Lifespan = 10,
     Size = 1,
+    KarmaCost = 10,
     UseVMHands = true
 }
 
@@ -48,6 +49,8 @@ function Animal:setPlayer (ply)
 
     self:extraSet(ply)
     self:specialAbility(ply)
+    self:loadout(ply)
+
 
     //TODO: add setting models
     //ply:SetModel(  )
@@ -79,14 +82,14 @@ cheeta = Animal:new({RunSpeed = 1000})
 print(baseAnimal.WalkSpeed)
 print(baseAnimal.RunSpeed)
 
-FlyingAnimal = Animal:new({DisplayName = 'FlyingAni'})
+FlyingAnimal = Animal:new({DisplayName = 'FlyingAni', FlySpeed = 500})
 
 function FlyingAnimal:specialAbility(forPlayer)
     hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )
         if (button == 17 and forPlayer == ply) then --if player clicks 17
             --add specific things to be done upon g press here
             print( ply:Nick() .. " pressed " .. button .. ' as a flying type')
-            ply:SetVelocity(Vector(0,0,1000))
+            ply:SetVelocity(Vector(0,0,self.FlySpeed))
         end
     end)
 end 
