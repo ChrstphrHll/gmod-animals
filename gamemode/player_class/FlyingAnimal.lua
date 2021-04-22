@@ -14,11 +14,11 @@ end
 
 ButterFly = FlyingAnimal:new({
     DisplayName = 'Butterfly',
-    WalkSpeed = 100,
-    RunSpeed = 150,
-    FlySpeed = 300,
+    WalkSpeed = 200,
+    RunSpeed = 250,
+    FlySpeed = 1000,
     Size = 0.1,
     KarmaCost = 24
 })
 
-ImplementedAnimals[ButterFly.DisplayName] = ButterFly
+--ImplementedAnimals[ButterFly.DisplayName] = ButterFly

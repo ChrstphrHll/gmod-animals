@@ -77,6 +77,7 @@ function Animal:new (o)
     o = o or {}
     setmetatable(o, self)
     self.__index = self
+    ImplementedAnimals[o.DisplayName] = o
     return o
 end
 
@@ -88,4 +89,4 @@ Worm = Animal:new({
     KarmaCost = 0
 })
 
-ImplementedAnimals[Worm.DisplayName] = Worm
+--ImplementedAnimals[Worm.DisplayName] = Worm

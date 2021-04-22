@@ -22,14 +22,12 @@ net.Receive("f4menu", function()
         DComboBox:SetValue( "Availible Animals" )
         for k in pairs(ImplementedAnimals) do 
             AnimalObject = ImplementedAnimals[k]
-            print(AnimalObject.DisplayName .. ' ' .. AnimalObject.KarmaCost)
             if (plyCurrentKarma >= AnimalObject.KarmaCost) then
                 DComboBox:AddChoice( AnimalObject.DisplayName ) 
             end
         end
 
         DComboBox.OnSelect = function( self, index, value )
-            print( value .." was selected at index " .. index )
             selected = value
         end
 
@@ -42,10 +40,9 @@ net.Receive("f4menu", function()
         Button.Paint = function( self, w, h )
             draw.RoundedBox( 0, 0, 0, w, h, Color( 41, 128, 185, 250 ) ) -- Draw a blue button
         end
+
         Button.DoClick = function()
-            print( "I was clicked!" )
             if (selected) then
-                print(ImplementedAnimals[selected])
                 ply:SetNWInt('karma', plyCurrentKarma - ImplementedAnimals[selected].KarmaCost)
                 ply:SetNWString('currentAnimal', selected)
                 Frame:Close()
