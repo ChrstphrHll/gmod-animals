@@ -17,6 +17,7 @@ Animal = {
     Lifespan = 10,
     Size = 1,
     KarmaCost = 10,
+    AbilityDescription = 'NA',
     UseVMHands = true
 }
 

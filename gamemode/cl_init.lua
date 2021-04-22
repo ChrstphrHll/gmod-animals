@@ -15,7 +15,8 @@ net.Receive("f4menu", function()
         end
                 
         local Button = vgui.Create("DButton", Frame)
-        Button:SetText( "Click me I'm pretty!" )
+        --Button:SetText( "Click me I'm pretty!" )
+        Button:SetText( LocalPlayer():Nick() )
         Button:SetTextColor( Color(255,255,255) )
         Button:SetPos( 100, 100 )
         Button:SetSize( 100, 30 )
