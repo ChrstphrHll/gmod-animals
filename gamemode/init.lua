@@ -7,7 +7,7 @@ include("testhud.lua")
 
 function GM:PlayerInitialSpawn(ply)
 	ply:SetNWString("currentAnimal", "Worm")
-    ply:SetNWInt('karma', 0)
+    ply:SetNWInt('karma', 1110)
 end
 
 function GM:PlayerSpawn(ply)

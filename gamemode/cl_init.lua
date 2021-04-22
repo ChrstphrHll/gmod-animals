@@ -31,6 +31,7 @@ net.Receive("f4menu", function()
         DComboBox:SetSize( 100, 20 )
         DComboBox:SetValue( "Availible Animals" )
         print('Player karma ' .. ply:GetNWInt('karma'))
+        print(ImplementedAnimals)
         for i,v in ipairs(ImplementedAnimals) do 
             print(v.DisplayName .. ' ' .. v.KarmaCost)
             if (ply:GetNWInt('karma') >= v.KarmaCost) then
