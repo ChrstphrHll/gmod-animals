@@ -6,8 +6,7 @@ net.Receive("f4menu", function()
         local selected = nil
         local ply = LocalPlayer()
         local plyCurrentKarma = ply:GetNWInt('karma')
-        local test = {}
-
+        
         local Frame = vgui.Create( "DFrame" )
         Frame:SetTitle( "Karma Store" )
         Frame:SetSize( 300,300 )
@@ -23,7 +22,6 @@ net.Receive("f4menu", function()
         DComboBox:SetValue( "Availible Animals" )
         for k in pairs(ImplementedAnimals) do 
             AnimalObject = ImplementedAnimals[k]
-            table.insert(test, AnimalObject)
             print(AnimalObject.DisplayName .. ' ' .. AnimalObject.KarmaCost)
             if (plyCurrentKarma >= AnimalObject.KarmaCost) then
                 DComboBox:AddChoice( AnimalObject.DisplayName ) 
@@ -32,7 +30,7 @@ net.Receive("f4menu", function()
 
         DComboBox.OnSelect = function( self, index, value )
             print( value .." was selected at index " .. index )
-            selected = index
+            selected = value
         end
 
         local Button = vgui.Create("DButton", Frame)
@@ -47,8 +45,8 @@ net.Receive("f4menu", function()
         Button.DoClick = function()
             print( "I was clicked!" )
             if (selected) then
-                print(test[selected])
-                ply:SetNWInt('karma', plyCurrentKarma - test[selected].KarmaCost)
+                print(ImplementedAnimals[selected])
+                ply:SetNWInt('karma', plyCurrentKarma - ImplementedAnimals[selected].KarmaCost)
                 Frame:Close()
             end
         end
