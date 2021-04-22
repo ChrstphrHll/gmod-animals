@@ -34,7 +34,7 @@ net.Receive("f4menu", function()
 
         local Button = vgui.Create("DButton", Frame)
         --Button:SetText( "Click me I'm pretty!" )
-        Button:SetText( ply:Nick() )
+        Button:SetText( 'Select Animal and Respawn' )
         Button:SetTextColor( Color(255,255,255) )
         Button:SetPos( 100, 100 )
         Button:SetSize( 100, 30 )
