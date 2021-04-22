@@ -33,6 +33,7 @@ net.Receive("f4menu", function()
         print('Player karma ' .. ply:GetNWInt('karma'))
         print(ImplementedAnimals)
         for i,v in ipairs(ImplementedAnimals) do 
+            print('eys')
             print(v.DisplayName .. ' ' .. v.KarmaCost)
             if (ply:GetNWInt('karma') >= v.KarmaCost) then
                 DComboBox:AddChoice( v.DisplayName ) 
