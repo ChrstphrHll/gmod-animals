@@ -18,6 +18,7 @@ ButterFly = FlyingAnimal:new({
     RunSpeed = 250,
     FlySpeed = 1000,
     Size = 0.1,
+    Playable = true,
     KarmaCost = 24
 })
 

@@ -20,6 +20,7 @@ Animal = {
     Size = 1,
     KarmaCost = 10,
     AbilityDescription = 'NA',
+    Playable = false,
     UseVMHands = true
 }
 
@@ -86,6 +87,7 @@ Worm = Animal:new({
     WalkSpeed = 50,
     RunSpeed = 75,
     Size = 0.1,
+    Playable = true,
     KarmaCost = 0
 })
 
