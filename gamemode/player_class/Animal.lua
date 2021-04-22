@@ -88,4 +88,4 @@ Worm = Animal:new({
     KarmaCost = 0
 })
 
-ImplementedAnimals['Worm'] = Worm
+ImplementedAnimals[Worm.DisplayName] = Worm
