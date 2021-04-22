@@ -21,4 +21,4 @@ ButterFly = FlyingAnimal:new({
     KarmaCost = 24
 })
 
-table.insert(ImplementedAnimals, ButterFly)
+ImplementedAnimals['ButterFly'] = ButterFly

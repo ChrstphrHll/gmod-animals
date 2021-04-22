@@ -81,11 +81,11 @@ function Animal:new (o)
 end
 
 Worm = Animal:new({
-    DisplayName = 'Worm'
+    DisplayName = 'Worm',
     WalkSpeed = 50,
     RunSpeed = 75,
     Size = 0.1,
     KarmaCost = 0
 })
 
-table.insert(ImplementedAnimals, Worm)
+ImplementedAnimals['Worm'] = Worm

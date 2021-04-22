@@ -6,13 +6,14 @@ include("shared.lua")
 include("testhud.lua")
 
 function GM:PlayerInitialSpawn(ply)
-	ply:SetNWString("currentAnimal", "")
+	ply:SetNWString("currentAnimal", "Worm")
     ply:SetNWInt('karma', 0)
 end
 
 function GM:PlayerSpawn(ply)
     ply:SetGravity(0.8)
-    FelineAnimal:setPlayer(ply)
+    animalToSet = ImplementedAnimals[ply:GetNWString("currentAnimal")]
+    animalToSet:setPlayer(ply)
 end
 
 function GM:OnNPC(npc, attacker, inflictor)
