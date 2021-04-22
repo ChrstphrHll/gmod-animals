@@ -1,4 +1,4 @@
-include('animal.lua')
+include('Animal.lua')
 
 FelineAnimal = Animal:new({DisplayName = 'FelineAni'})
 
@@ -10,4 +10,4 @@ function FelineAnimal:specialAbility(forPlayer)
             ply:SetVelocity(Vector(1000,0,0))
         end
     end)
-end 
+end
