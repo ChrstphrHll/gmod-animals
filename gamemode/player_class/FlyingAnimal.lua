@@ -13,7 +13,7 @@ function FlyingAnimal:specialAbility(forPlayer)
 end 
 
 ButterFly = FlyingAnimal:new({
-    DisplayName = 'Butterfly'
+    DisplayName = 'Butterfly',
     WalkSpeed = 100,
     RunSpeed = 150,
     FlySpeed = 300,
