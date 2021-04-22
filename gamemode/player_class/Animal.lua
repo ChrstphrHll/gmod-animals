@@ -30,6 +30,7 @@ function Animal:extraSet(ply)
 end
 
 function Animal:specialAbility(forPlayer)
+    print('oh you better belive im seeting a special ability')
     hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )
         if (button == 17 and forPlayer == ply) then --if player clicks 17
             --add specific things to be done upon g press here
