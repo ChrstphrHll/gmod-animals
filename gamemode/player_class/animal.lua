@@ -50,7 +50,7 @@ function Animal:setPlayer (ply)
     self:specialAbility(ply)
 
     //TODO: add setting models
-    ply:SetModel( "models/ttt/thanos-solid.stl" )
+    ply:SetModel( "models/alyx/alyx.qc" )
 
 end
 
