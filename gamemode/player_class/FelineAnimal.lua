@@ -1,3 +1,5 @@
+include('animal.lua')
+
 FelineAnimal = Animal:new({DisplayName = 'FelineAni'})
 
 function FelineAnimal:specialAbility(forPlayer)
