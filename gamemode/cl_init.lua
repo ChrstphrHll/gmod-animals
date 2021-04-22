@@ -4,7 +4,7 @@ include("testhud.lua")
 net.Receive("f4menu", function()
     print('dingngngngn')
 
-    if (!Frame)
+    if (!Frame) then
         local Frame = vgui.Create( "DFrame" )
         Frame:SetTitle( "Test panel" )
         Frame:SetSize( 300,300 )
