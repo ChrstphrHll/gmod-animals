@@ -10,14 +10,6 @@ include("karmaMenu.lua")
 function GM:PlayerInitialSpawn(ply)
 	--ply:SetNWString("currentAnimal", "nujkuyjhgfdhjkll")
     ply:SetNWInt('karma', 0)
-    local Frame = vgui.Create( "DFrame" )
-    Frame:SetPos( 5, 5 ) 
-    Frame:SetSize( 300, 150 ) 
-    Frame:SetTitle( "Name window" ) 
-    Frame:SetVisible( true ) 
-    Frame:SetDraggable( false ) 
-    Frame:ShowCloseButton( true ) 
-    Frame:MakePopup()
 end
 
 function GM:PlayerSpawn(ply)
@@ -33,4 +25,11 @@ end
 
 function GM:PlayerDeath(player, inflictor, attacker)
 
+end
+
+util.AddNetworkString("f4menu")
+
+function GM:ShowSpare2(ply)
+    net.Start("f4menu")
+    net.Send(ply)
 end
