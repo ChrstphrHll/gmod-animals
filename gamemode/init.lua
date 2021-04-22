@@ -23,7 +23,7 @@ util.AddNetworkString("f4menu")
 
 function GM:PlayerDeath(player, inflictor, attacker)
     net.Start("f4menu")
-    net.Send(ply)
+    net.Send(player)
 end
 
 
