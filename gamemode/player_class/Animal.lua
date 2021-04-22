@@ -79,6 +79,4 @@ end
 
 baseAnimal = Animal:new()
 cheeta = Animal:new({RunSpeed = 1000})
-print(baseAnimal.WalkSpeed)
-print(baseAnimal.RunSpeed)
 
