@@ -39,6 +39,7 @@ net.Receive("f4menu", function()
             print( value .." was selected at index " .. index )
         end
 
+        Frame:ShowCloseButton(false)
         Frame:SetDeleteOnClose( true )
     end
 end)
