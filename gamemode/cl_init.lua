@@ -44,6 +44,7 @@ net.Receive("f4menu", function()
         Button.DoClick = function()
             print( "I was clicked!" )
             if (selected) then
+                print(selected)
                 ply:SetNWInt('karma', plyCurrentKarma - ImplementedAnimals[selected].KarmaCost)
                 Frame:Close()
             end
