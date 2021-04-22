@@ -48,6 +48,8 @@ function Animal:setPlayer (ply)
 
     self:extraSet(ply)
     self:specialAbility(ply)
+    self:loadout(ply)
+
 
     //TODO: add setting models
     //ply:SetModel(  )

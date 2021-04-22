@@ -14,7 +14,6 @@ function GM:PlayerSpawn(ply)
     ply:Say('huh? world')
     ply:SetGravity(0.8)
     FlyingAnimal:setPlayer(ply)
-    FlyingAnimal:loadout(ply)
 end
 
 function GM:OnNPC(npc, attacker, inflictor)
