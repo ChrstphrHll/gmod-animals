@@ -6,7 +6,7 @@ net.Receive("f4menu", function()
         local selected = nil
         local ply = LocalPlayer()
         local plyCurrentKarma = ply:GetNWInt('karma')
-        
+
         local Frame = vgui.Create( "DFrame" )
         Frame:SetTitle( "Karma Store" )
         Frame:SetSize( 300,300 )
@@ -47,6 +47,7 @@ net.Receive("f4menu", function()
             if (selected) then
                 print(ImplementedAnimals[selected])
                 ply:SetNWInt('karma', plyCurrentKarma - ImplementedAnimals[selected].KarmaCost)
+                ply:SetNWString('currentAnimal', selected)
                 Frame:Close()
             end
         end
