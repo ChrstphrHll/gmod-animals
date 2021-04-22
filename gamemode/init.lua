@@ -1,11 +1,9 @@
 AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
 AddCSLuaFile("testhud.lua")
-AddCSLuaFile("karmaMenu.lua")
 
 include("shared.lua")
 include("testhud.lua")
-include("karmaMenu.lua")
 
 function GM:PlayerInitialSpawn(ply)
 	--ply:SetNWString("currentAnimal", "nujkuyjhgfdhjkll")
