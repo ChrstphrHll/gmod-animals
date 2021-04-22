@@ -1,3 +1,5 @@
+ImplementedAnimals = {}
+
 Animal = {
     DisplayName = 'Animal',
     WalkSpeed = 400,

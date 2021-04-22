@@ -11,3 +11,14 @@ function FlyingAnimal:specialAbility(forPlayer)
         end
     end)
 end 
+
+ButterFly = FlyingAnimal:new({
+    DisplayName = 'Butterfly'
+    WalkSpeed = 100,
+    RunSpeed = 150,
+    FlySpeed = 300,
+    Size = 0.1,
+    KarmaCost = 24
+})
+
+table.insert(ImplementedAnimals, ButterFly)
