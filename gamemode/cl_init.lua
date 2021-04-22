@@ -31,9 +31,10 @@ net.Receive("f4menu", function()
         DComboBox:SetPos( 5, 30 )
         DComboBox:SetSize( 100, 20 )
         DComboBox:SetValue( "Availible Animals" )
-        DComboBox:AddChoice( "option A" )
-        DComboBox:AddChoice( "option B" )
-        DComboBox:AddChoice( "option C" )
+        for i,v in ipairs(ImplementedAnimals) do 
+            DComboBox:AddChoice( v.DisplayName ) 
+        end
+
         DComboBox.OnSelect = function( self, index, value )
             print( value .." was selected at index " .. index )
         end
