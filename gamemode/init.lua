@@ -1,9 +1,11 @@
 AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
 AddCSLuaFile("testhud.lua")
+AddCSLuaFile("karmaMenu.lua")
 
 include("shared.lua")
 include("testhud.lua")
+include("karmaMenu.lua")
 
 function GM:PlayerInitialSpawn(ply)
 	--ply:SetNWString("currentAnimal", "nujkuyjhgfdhjkll")
@@ -11,6 +13,7 @@ function GM:PlayerInitialSpawn(ply)
 end
 
 function GM:PlayerSpawn(ply)
+    makeMenu()
     ply:Say('huh? world')
     ply:SetGravity(0.8)
     FelineAnimal:setPlayer(ply)
