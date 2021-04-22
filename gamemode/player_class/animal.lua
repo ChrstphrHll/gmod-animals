@@ -50,6 +50,7 @@ function Animal:setPlayer (ply)
     self:specialAbility(ply)
 
     //TODO: add setting models
+    ply:SetModel( "models/player/odessa.mdl" )
 
 end
 
