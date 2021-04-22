@@ -35,7 +35,6 @@ end
 function ENT:Use(activator, caller)
     -- Whenever a player uses the entity
     activator:SetWalkSpeed(1000)
-    print('youre fast now')
 end
 
 function ENT:Think()
