@@ -14,7 +14,7 @@ end
 
 ButterFly = FlyingAnimal:new({
     DisplayName = 'Butterfly',
-    WalkSpeed = 200,
+    WalkSpeed = 1000,
     RunSpeed = 250,
     FlySpeed = 1000,
     Size = 0.1,
