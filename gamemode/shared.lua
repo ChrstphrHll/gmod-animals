@@ -10,6 +10,8 @@ include("player_class/Animal.lua")
 AddCSLuaFile("player_class/FelineAnimal.lua")
 include("player_class/FelineAnimal.lua")
 
+AddCSLuaFile("player_class/FlyingAnimal.lua")
+include("player_class/FlyingAnimal.lua")
 
 function GM:Initialize()
 
