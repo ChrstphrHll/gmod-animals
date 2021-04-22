@@ -2,9 +2,8 @@ include("shared.lua")
 include("testhud.lua")
 
 net.Receive("f4menu", function()
-    print('dingngngngn')
-
     if (!Frame) then
+        local ply = LocalPlayer()
         local Frame = vgui.Create( "DFrame" )
         Frame:SetTitle( "Karma Store" )
         Frame:SetSize( 300,300 )
@@ -16,7 +15,7 @@ net.Receive("f4menu", function()
                 
         local Button = vgui.Create("DButton", Frame)
         --Button:SetText( "Click me I'm pretty!" )
-        Button:SetText( LocalPlayer():Nick() )
+        Button:SetText( ply:Nick() )
         Button:SetTextColor( Color(255,255,255) )
         Button:SetPos( 100, 100 )
         Button:SetSize( 100, 30 )
@@ -32,7 +31,9 @@ net.Receive("f4menu", function()
         DComboBox:SetSize( 100, 20 )
         DComboBox:SetValue( "Availible Animals" )
         for i,v in ipairs(ImplementedAnimals) do 
-            DComboBox:AddChoice( v.DisplayName ) 
+            if (ply:GetNWInt('karma') >= v.KarmaCost) then
+                DComboBox:AddChoice( v.DisplayName ) 
+            end
         end
 
         DComboBox.OnSelect = function( self, index, value )

@@ -80,6 +80,12 @@ function Animal:new (o)
     return o
 end
 
-baseAnimal = Animal:new()
-cheeta = Animal:new({RunSpeed = 1000})
+Worm = Animal:new({
+    DisplayName = 'Worm'
+    WalkSpeed = 50,
+    RunSpeed = 75,
+    Size = 0.1,
+    KarmaCost = 0
+})
 
+table.insert(ImplementedAnimals, Worm)
