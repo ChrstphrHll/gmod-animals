@@ -85,7 +85,7 @@ function FlyingAnimal:specialAbility(forPlayer)
         if (button == 17 and forPlayer == ply) then --if player clicks 17
             --add specific things to be done upon g press here
             print( ply:Nick() .. " pressed " .. button .. ' as a flying type')
-            ply:SetVelocity(Vector(0,0,10000))
+            ply:SetVelocity(Vector(0,0,1000))
         end
     end)
 end 
