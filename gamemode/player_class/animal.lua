@@ -16,6 +16,7 @@ Animal = {
     AvoidPlayers = true,
     Lifespan = 10,
     Size = 1,
+    KarmaCost = 10,
     UseVMHands = true
 }
 
