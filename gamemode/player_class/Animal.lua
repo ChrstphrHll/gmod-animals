@@ -48,7 +48,7 @@ function Animal:setPlayer (ply)
     ply:SetCrouchedWalkSpeed(self.CrouchedWalkSpeed)
     ply:SetDuckSpeed(self.DuckSpeed)
 
-    ply:SetNWString('currentAnimal', self.DisplayName)
+    --ply:SetNWString('currentAnimal', self.DisplayName)
     ply:SetModelScale( self.Size, 0 )
     timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function() self:handleKarma(ply) end)
 
