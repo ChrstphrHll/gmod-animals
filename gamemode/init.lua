@@ -6,12 +6,17 @@ include("shared.lua")
 include("testhud.lua")
 
 function GM:PlayerInitialSpawn(ply)
-    print(ply:Nick() .. ' just spawned for the first time')
-	ply:SetNWString("currentAnimal", "Worm")
-    ply:SetNWInt('karma', 1110)
+    -- print(ply:Nick() .. ' just spawned for the first time')
+	-- ply:SetNWString("currentAnimal", "Worm")
+    -- ply:SetNWInt('karma', 1110)
 end
 
 function GM:PlayerSpawn(ply)
+    if (ply:GetNWInt('karma', -1) == -1) then
+        print(ply:Nick() .. ' just spawned for the first time')
+        ply:SetNWString("currentAnimal", "Worm")
+        ply:SetNWInt('karma', 1110)
+    end
     ply:SetGravity(0.8)
     animalToSet = ImplementedAnimals[ply:GetNWString("currentAnimal")]
     animalToSet:setPlayer(ply)
