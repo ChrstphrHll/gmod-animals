@@ -34,8 +34,12 @@ end
 
 function ENT:Use(activator, caller)
     -- Whenever a player uses the entity
-    print("Gaining 50 karma...")
-    activator.SetNWInt("karma", activator.GetNWInt("karma") + 50)
+    if activator ~= nil then
+        print("Gaining 50 karma...")
+        activator:SetNWInt("karma", activator:GetNWInt("karma") + 50)
+        print("Remaining karma:")
+        print(activator:GetNWInt("karma"))
+    end
 
 end
 
