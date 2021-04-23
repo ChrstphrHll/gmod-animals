@@ -22,7 +22,7 @@ net.Receive("f4menu", function()
         DComboBox:SetValue( "Availible Animals" )
         for k in pairs(ImplementedAnimals) do 
             AnimalObject = ImplementedAnimals[k]
-            if (plyCurrentKarma >= AnimalObject.KarmaCost) then
+            if (plyCurrentKarma >= AnimalObject.KarmaCost and AnimalObject.Playable) then
                 DComboBox:AddChoice( AnimalObject.DisplayName ) 
             end
         end
