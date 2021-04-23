@@ -12,7 +12,7 @@ function FelineAnimal:specialAbility(forPlayer)
     end)
 end
 
-Cat = FelineAnimal:new({
+CatAnimal = FelineAnimal:new({
     DisplayName = 'Cat',
     WalkSpeed = 1000,
     RunSpeed = 250,
@@ -21,7 +21,7 @@ Cat = FelineAnimal:new({
     KarmaCost = 50
 })
 
-Tiger = FelineAnimal:new({
+TigerAnimal = FelineAnimal:new({
     DisplayName = 'Tiger',
     WalkSpeed = 2000,
     RunSpeed = 500,
@@ -29,3 +29,6 @@ Tiger = FelineAnimal:new({
     Playable = true,
     KarmaCost = 100
 })
+--
+-- ImplementedAnimals['Cat'] = Cat
+-- ImplementedAnimals['Tiger'] = Tiger

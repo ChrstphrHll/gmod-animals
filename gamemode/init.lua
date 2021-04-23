@@ -44,8 +44,9 @@ util.AddNetworkString( "ClientClassInfo" )
  
 net.Receive( "ClientClassInfo", function( len, ply ) -- len is the net message length, which we don't care about, ply is the player who sent it.
     local karma = net.ReadUInt( 16 ) -- Notice how ReadUInt requires an argument. This is the second argument of WriteUInt, which tells us how big the number is.
-    PrintMessage( HUD_PRINTTALK, ply:Nick() .. " has " .. karma .. " karma!" )
-    ply:SetNWInt('karma', karma)
+    local karma2 = ply:GetNWInt("karma")
+    PrintMessage( HUD_PRINTTALK, ply:Nick() .. " has " .. karma2 .. " karma!" )
+    ply:SetNWInt('karma', karma2)
 
     local class = net.ReadString()
     PrintMessage( HUD_PRINTTALK, ply:Nick() .. " is now a " .. class .. "!" )
