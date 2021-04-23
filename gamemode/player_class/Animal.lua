@@ -64,10 +64,10 @@ end
 
 // We're actually dealing with karma stuff here?
 function Animal:handleKarma(ply)
-    print(ply:GetNWString( 'currentAnimal' ))
-    local hey = ply:GetNWInt('karma')
-    print(hey)
-    ply:SetNWInt('karma', hey + 10)
+    -- print(ply:GetNWString( 'currentAnimal' ))
+    -- local hey = ply:GetNWInt('karma')
+    -- print(hey)
+    -- ply:SetNWInt('karma', hey + 10)
     ply:Kill()
 end 
 
