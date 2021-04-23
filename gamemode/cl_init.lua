@@ -43,8 +43,10 @@ net.Receive("f4menu", function()
 
         Button.DoClick = function()
             if (selected) then
-                ply:SetNWInt('karma', plyCurrentKarma - ImplementedAnimals[selected].KarmaCost)
-                ply:SetNWString('currentAnimal', selected)
+                net.Start( "ClientClassInfo" )
+                net.WriteUInt( plyCurrentKarma - ImplementedAnimals[selected].KarmaCost, 16 ) -- Max karma is 65,536
+                net.WriteString(selected)
+                net.SendToServer()
                 Frame:Close()
             end
         end

@@ -39,3 +39,15 @@ function GM:ShowSpare2(ply)
     net.Start("f4menu")
     net.Send(ply)
 end
+
+util.AddNetworkString( "ClientClassInfo" )
+ 
+net.Receive( "ClientClassInfo", function( len, ply ) -- len is the net message length, which we don't care about, ply is the player who sent it.
+    local karma = net.ReadUInt( 16 ) -- Notice how ReadUInt requires an argument. This is the second argument of WriteUInt, which tells us how big the number is.
+    PrintMessage( HUD_PRINTTALK, ply:Nick() .. " has " .. karma .. " karma!" )
+    ply:SetNWInt('karma', karma)
+
+    local class = net.ReadString()
+    PrintMessage( HUD_PRINTTALK, ply:Nick() .. " is now a " .. class .. "!" )
+    ply:SetNWString('currentAnimal', class)
+ end )
