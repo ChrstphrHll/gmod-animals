@@ -34,7 +34,6 @@ end
 
 function ENT:Use(activator, caller)
     -- Whenever a player uses the entity
-    activator:SetWalkSpeed(1000)
     print("Gaining 50 karma...")
     activator.SetNWInt("karma", activator.GetNWInt("karma") + 50)
 

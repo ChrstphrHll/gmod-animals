@@ -81,6 +81,7 @@ function Animal:handleKarma(ply)
     -- local hey = ply:GetNWInt('karma')
     -- print(hey)
     -- ply:SetNWInt('karma', hey + 10)
+    ply.SetNWInt("karma", activator.GetNWInt("karma") - self.KarmaCost)
     ply:Kill()
 end 
 
