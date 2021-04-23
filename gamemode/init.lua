@@ -14,11 +14,12 @@ end
 function GM:PlayerSpawn(ply)
     if (ply:GetNWInt('karma', -1) == -1) then
         print(ply:Nick() .. ' just spawned for the first time')
-        ply:SetNWString("currentAnimal", "Worm")
+        ply:SetNWString("currentAnimal", "Butterfly")
         ply:SetNWInt('karma', 1110)
     end
     ply:SetGravity(0.8)
     animalToSet = ImplementedAnimals[ply:GetNWString("currentAnimal")]
+    print(animalToSet.DisplayName)
     animalToSet:setPlayer(ply)
 end
 

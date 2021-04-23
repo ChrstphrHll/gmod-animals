@@ -74,7 +74,7 @@ function Animal:handleKarma(ply)
 end 
 
 function Animal:loadout (ply)
-    ply:Give("weapon_physgun")
+    ply:Give("weapon_crossbow")
 end
 
 function Animal:new (o)
