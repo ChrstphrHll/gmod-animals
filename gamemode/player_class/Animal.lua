@@ -40,6 +40,8 @@ function Animal:specialAbility(forPlayer)
 end 
 
 function Animal:setPlayer (ply)
+    print('Setting player to be ' .. self.DisplayName)
+
     --function that sets all the properties of a player
     ply:SetMaxHealth(self.MaxHealth)
     ply:SetRunSpeed(self.RunSpeed)
