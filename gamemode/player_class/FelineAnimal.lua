@@ -1,4 +1,4 @@
-include('Animal.lua')
+include('FlyingAnimal.lua')
 
 FelineAnimal = Animal:new({DisplayName = 'FelineAni', Lifespan = 20})
 
