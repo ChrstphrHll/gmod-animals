@@ -22,14 +22,5 @@ ButterFly = FlyingAnimal:new({
     KarmaCost = 24
 })
 
-Testing = FlyingAnimal:new({
-    DisplayName = 'Testinng',
-    WalkSpeed = 1000,
-    RunSpeed = 250,
-    FlySpeed = 1000,
-    Size = 0.1,
-    Playable = true,
-    KarmaCost = 24
-})
 
 

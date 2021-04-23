@@ -1,6 +1,6 @@
 include('Animal.lua')
 
-FelineAnimal = Animal:new({DisplayName = 'FelineAni'})
+FelineAnimal = Animal:new({DisplayName = 'FelineAni', Lifespan = 20})
 
 function FelineAnimal:specialAbility(forPlayer)
     hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )
@@ -29,6 +29,3 @@ TigerAnimal = FelineAnimal:new({
     Playable = true,
     KarmaCost = 100
 })
---
--- ImplementedAnimals['Cat'] = Cat
--- ImplementedAnimals['Tiger'] = Tiger
