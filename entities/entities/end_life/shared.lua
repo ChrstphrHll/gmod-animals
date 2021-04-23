@@ -2,7 +2,7 @@ ENT.Type = "anim"
 ENT.Base = "base_gmodentity"
 ENT.Category = "Activities"
 
-ENT.Model = "models/props_lab/reciever_cart.mdl"
+ENT.Model = "models/props_lab/generatorconsole.mdl"
 
 ENT.PrintName = "End Life Power Up"
 ENT.Author = "Christopher"

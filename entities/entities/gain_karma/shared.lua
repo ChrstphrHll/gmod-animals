@@ -2,7 +2,7 @@ ENT.Type = "anim"
 ENT.Base = "base_gmodentity"
 ENT.Category = "Activities"
 
-ENT.Model = "models/props_lab/reciever_cart.mdl"
+ENT.Model = "models/props_lab/filecabinet02.mdl"
 
 ENT.PrintName = "Karma Power Up"
 ENT.Author = "Christopher"
