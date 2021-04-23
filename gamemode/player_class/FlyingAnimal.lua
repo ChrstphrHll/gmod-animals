@@ -22,4 +22,3 @@ ButterFly = FlyingAnimal:new({
     KarmaCost = 24
 })
 
---ImplementedAnimals[ButterFly.DisplayName] = ButterFly

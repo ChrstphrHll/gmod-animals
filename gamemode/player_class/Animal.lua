@@ -1,5 +1,11 @@
+
+
+--Table that will contain all of our various classes
+--Constructor adds them automatically
 ImplementedAnimals = {}
 
+--Base atributes of an animal, a lot of this will probably
+--get cut once we know which ones go unused
 Animal = {
     DisplayName = 'Animal',
     WalkSpeed = 400,
@@ -24,11 +30,14 @@ Animal = {
     UseVMHands = true
 }
 
+--If a class wants to set extra things they would do so
+--by overriding this function
 function Animal:extraSet(ply)
     --fuction to set any extra parameters outside of baseanimal
 
 end
 
+--Each animal's special ability will be set by this function
 function Animal:specialAbility(forPlayer)
     print('oh you better belive im seeting a special ability')
     hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )
@@ -39,6 +48,8 @@ function Animal:specialAbility(forPlayer)
     end)
 end 
 
+--Called when a player spawns in, applies all of the animals
+--atributes to the player and starts the lifespan timer
 function Animal:setPlayer (ply)
     print('Setting player to be ' .. self.DisplayName)
 
@@ -64,7 +75,7 @@ function Animal:setPlayer (ply)
 
 end
 
-// We're actually dealing with karma stuff here?
+-- Currently this just kills the player but 
 function Animal:handleKarma(ply)
     -- print(ply:GetNWString( 'currentAnimal' ))
     -- local hey = ply:GetNWInt('karma')
@@ -73,10 +84,12 @@ function Animal:handleKarma(ply)
     ply:Kill()
 end 
 
+--If an animal needs a weapon do it here
 function Animal:loadout (ply)
     ply:Give("weapon_crossbow")
 end
 
+--Constructor for new Animal Classes
 function Animal:new (o)
     o = o or {}
     setmetatable(o, self)
@@ -85,6 +98,7 @@ function Animal:new (o)
     return o
 end
 
+--Starting animal
 Worm = Animal:new({
     DisplayName = 'Worm',
     WalkSpeed = 50,
@@ -94,4 +108,3 @@ Worm = Animal:new({
     KarmaCost = 0
 })
 
---ImplementedAnimals[Worm.DisplayName] = Worm

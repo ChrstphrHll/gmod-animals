@@ -5,18 +5,16 @@ AddCSLuaFile("testhud.lua")
 include("shared.lua")
 include("testhud.lua")
 
+--Called the first time a player spawns
 function GM:PlayerInitialSpawn(ply)
-    -- print(ply:Nick() .. ' just spawned for the first time')
-	-- ply:SetNWString("currentAnimal", "Worm")
-    -- ply:SetNWInt('karma', 1110)
+    print(ply:Nick() .. ' just spawned for the first time')
+	ply:SetNWString("currentAnimal", "Worm")
+    ply:SetNWInt('karma', 1110)
 end
 
+--Called each time a player spawns
+--Handles setting the player's class
 function GM:PlayerSpawn(ply)
-    if (ply:GetNWInt('karma', -1) == -1) then
-        print(ply:Nick() .. ' just spawned for the first time')
-        ply:SetNWString("currentAnimal", "Butterfly")
-        ply:SetNWInt('karma', 1110)
-    end
     ply:SetGravity(0.8)
     animalToSet = ImplementedAnimals[ply:GetNWString("currentAnimal")]
     print(animalToSet.DisplayName)
@@ -27,6 +25,7 @@ function GM:OnNPC(npc, attacker, inflictor)
     
 end
 
+--Communicates to Client to open class change menu
 util.AddNetworkString("f4menu")
 
 function GM:PlayerDeath(player, inflictor, attacker)
@@ -34,12 +33,13 @@ function GM:PlayerDeath(player, inflictor, attacker)
     net.Send(player)
 end
 
-
+--For debugging purposes
 function GM:ShowSpare2(ply)
     net.Start("f4menu")
     net.Send(ply)
 end
 
+--Recieves communication about class change selections
 util.AddNetworkString( "ClientClassInfo" )
  
 net.Receive( "ClientClassInfo", function( len, ply ) -- len is the net message length, which we don't care about, ply is the player who sent it.

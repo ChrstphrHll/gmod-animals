@@ -1,6 +1,7 @@
 include("shared.lua")
 include("testhud.lua")
 
+--Menu seen upon death that makes the player select what animal they will be next
 net.Receive("f4menu", function()
     if (!Frame) then
         local selected = nil
