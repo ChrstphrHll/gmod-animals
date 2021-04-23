@@ -11,3 +11,21 @@ function FelineAnimal:specialAbility(forPlayer)
         end
     end)
 end
+
+Cat = FelineAnimal:new(
+    DisplayName = 'Cat',
+    WalkSpeed = 1000,
+    RunSpeed = 250,
+    Size = 0.5,
+    Playable = true,
+    KarmaCost = 50
+}
+
+Tiger = FelineAnimal:new(
+    DisplayName = 'Tiger',
+    WalkSpeed = 2000,
+    RunSpeed = 500,
+    Size = 1,
+    Playable = true,
+    KarmaCost = 100
+}
