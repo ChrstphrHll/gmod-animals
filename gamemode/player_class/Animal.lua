@@ -90,7 +90,7 @@ end
 
 --If an animal needs a weapon do it here
 function Animal:loadout (ply)
-    ply:Give("weapon_crossbow")
+    -- ply:Give("weapon_crossbow")
 end
 
 --Constructor for new Animal Classes
