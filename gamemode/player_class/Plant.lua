@@ -53,5 +53,3 @@ OakTree = Plant:new({
     GrowthAmount = 500,
     Playable = true
 })
-
-print(Flower.setPlayer)

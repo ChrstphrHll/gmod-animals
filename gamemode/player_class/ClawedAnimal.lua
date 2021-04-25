@@ -1,7 +1,7 @@
 include("FelineAnimal.lua")
 include("Hybrid.lua")
 
-Clawed = {}
+Clawed = Animal:new({DisplayName = 'clawed'})
 function Clawed:loadout (ply)
     ply:Give("weapon_crowbar")
 end
@@ -15,4 +15,4 @@ end
 --     FlySpeed = '500'
 -- })
 
--- print('claed loaded' .. Clawed.loadout)
+print(Clawed.loadout)
