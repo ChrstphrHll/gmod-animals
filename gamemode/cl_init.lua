@@ -45,6 +45,7 @@ net.Receive("f4menu", function()
         Button.DoClick = function()
             if (selected) then
                 net.Start( "ClientClassInfo" )
+                print('it cost this ' .. ImplementedAnimals[selected].KarmaCost)
                 net.WriteUInt( plyCurrentKarma - ImplementedAnimals[selected].KarmaCost, 16 ) -- Max karma is 65,536
                 net.WriteString(selected)
                 net.SendToServer()
