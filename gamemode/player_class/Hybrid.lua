@@ -19,9 +19,12 @@ function createClass (...)
     c.__index = c
 
     -- define a new constructor for this new class
-    function c:new (o)
+    function c:new (o, c)
         o = o or {}
         setmetatable(o, c)
+        self.__index = self
+        ImplementedAnimals[o.DisplayName] = o
+        print('added ' .. o.DisplayName .. 'to the table')
         return o
     end
 
