@@ -16,7 +16,7 @@ Hawk = ClawedFlyer:new({
 })
 
 function lookatmetaof(o)
-    for key,value in pairs(getmetatable(o)) do
+    for key,value in pairs(o) do
         print(key, value)
         if key == '__index' then
             lookatmetaof(value)
