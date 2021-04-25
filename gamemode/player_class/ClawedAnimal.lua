@@ -15,4 +15,4 @@ Hawk = ClawedFlyer:new({
     FlySpeed = '500'
 })
 
-print(ClawedFlyer.setPlayer)
+print('claed loaded' .. Clawed.loadout)

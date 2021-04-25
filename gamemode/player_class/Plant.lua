@@ -51,3 +51,5 @@ OakTree = Plant.new({
     GrowthAmount = 500,
     Playable = true
 })
+
+print('plants setPlayer: ' .. OakTree.setPlayer)
