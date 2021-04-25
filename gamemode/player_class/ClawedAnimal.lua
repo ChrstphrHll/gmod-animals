@@ -15,4 +15,5 @@ ClawedFlyer = FlyingAnimal:new({DisplayName = 'ClawedFlyer'})
 --     FlySpeed = '500'
 -- })
 
-print(ClawedFlyer.setPlayer)
+print(ClawedFlyer.loadout)
+print(ClawedFlyer.specialAbility)
