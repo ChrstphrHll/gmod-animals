@@ -37,16 +37,16 @@ Animal = {
 
 -- end
 
--- --Each animal's special ability will be set by this function
--- function Animal:specialAbility(forPlayer)
---     print('oh you better belive im seeting a special ability')
---     hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )
---         if (button == 17 and forPlayer == ply) then --if player clicks 17
---             --add specific things to be done upon g press here
---             print( ply:Nick() .. " pressed " .. button )
---         end
---     end)
--- end 
+--Each animal's special ability will be set by this function
+function Animal:specialAbility(forPlayer)
+    print('oh you better belive im seeting a special ability')
+    hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )
+        if (button == 17 and forPlayer == ply) then --if player clicks 17
+            --add specific things to be done upon g press here
+            print( ply:Nick() .. " pressed " .. button )
+        end
+    end)
+end 
 
 --Called when a player spawns in, applies all of the animals
 --atributes to the player and starts the lifespan timer
@@ -65,13 +65,11 @@ function Animal:setPlayer (ply)
     ply:SetModelScale( self.Size, 0 )
     timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function() self:handleKarma(ply) end)
 
+    self:specialAbility(ply)
+
     if (self.extraSet) then 
         print('Setting a little something extra')
         self:extraSet(ply)
-    end
-    if (self.specialAbility) then
-        print('Setting a specialAbility')
-        self:specialAbility(ply)
     end
     if (self.loadout) then
         print('Setting the loadout')
