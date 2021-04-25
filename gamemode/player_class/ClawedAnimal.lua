@@ -6,13 +6,13 @@ function Clawed:loadout (ply)
     ply:Give("weapon_crowbar")
 end
 
-ClawedFlyer = createClass(Clawed, FlyingAnimal)
+-- ClawedFlyer = createClass(Clawed, FlyingAnimal)
 
-Hawk = ClawedFlyer:new({
-    DisplayName = 'Hawk',
-    Playable = true,
-    KarmaCost = 74,
-    FlySpeed = '500'
-})
+-- Hawk = ClawedFlyer:new({
+--     DisplayName = 'Hawk',
+--     Playable = true,
+--     KarmaCost = 74,
+--     FlySpeed = '500'
+-- })
 
-print('claed loaded' .. Clawed.loadout)
+-- print('claed loaded' .. Clawed.loadout)
