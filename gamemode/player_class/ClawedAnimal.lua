@@ -6,7 +6,7 @@ function Clawed:loadout (ply)
     ply:Give("weapon_crowbar")
 end
 
-ClawedFlyer = FlyingAnimal:new({DisplayName = 'ClawedFlyer'})
+ClawedFlyer = Clawed:new(FlyingAnimal:new({DisplayName = 'ClawedFlyer'}))
 
 -- Hawk = ClawedFlyer:new({
 --     DisplayName = 'Hawk',
