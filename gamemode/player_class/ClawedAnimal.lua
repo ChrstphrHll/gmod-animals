@@ -1,12 +1,12 @@
 include("FelineAnimal.lua")
 include("Hybrid.lua")
 
-Clawed = Animal:new({DisplayName = 'clawed'})
+Clawed = Animal:new({DisplayName = 'Clawed'})
 function Clawed:loadout (ply)
     ply:Give("weapon_crowbar")
 end
 
--- ClawedFlyer = createClass(Clawed, FlyingAnimal)
+ClawedFlyer = FlyingAnimal:new({DisplayName = 'ClawedFlyer'})
 
 -- Hawk = ClawedFlyer:new({
 --     DisplayName = 'Hawk',
@@ -15,4 +15,4 @@ end
 --     FlySpeed = '500'
 -- })
 
-print(Clawed.setPlayer)
+print(ClawedFlyer.setPlayer)
