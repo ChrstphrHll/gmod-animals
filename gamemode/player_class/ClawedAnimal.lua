@@ -19,7 +19,7 @@ function lookatmetaof(o)
     for key,value in pairs(getmetatable(o)) do
         print(key, value)
         if key == '__index' then
-            lookatmetaof(o)
+            lookatmetaof(value)
         end
     end
 end
