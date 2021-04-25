@@ -15,4 +15,4 @@ end
 --     FlySpeed = '500'
 -- })
 
-print(Clawed.loadout)
+print(Clawed.setPlayer)
