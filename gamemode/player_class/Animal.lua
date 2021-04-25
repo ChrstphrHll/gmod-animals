@@ -48,6 +48,10 @@ function Animal:specialAbility(forPlayer)
     end)
 end 
 
+function Animal:test()
+    print('this is animals test')
+end
+
 --Called when a player spawns in, applies all of the animals
 --atributes to the player and starts the lifespan timer
 function Animal:setPlayer (ply)

@@ -15,5 +15,6 @@ Hawk = ClawedFlyer:new({
     FlySpeed = '500'
 })
 
+Hawk.test()
 -- print(ClawedFlyer.loadout)
 -- print(ClawedFlyer.specialAbility)

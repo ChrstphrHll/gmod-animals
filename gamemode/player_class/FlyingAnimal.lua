@@ -12,6 +12,10 @@ function FlyingAnimal:specialAbility(forPlayer)
     end)
 end 
 
+function FlyingAnimal:test()
+    print('this is flyinganimals test')
+end
+
 ButterFly = FlyingAnimal:new({
     DisplayName = 'Butterfly',
     WalkSpeed = 1000,
