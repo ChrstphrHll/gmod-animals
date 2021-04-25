@@ -73,6 +73,7 @@ function Animal:setPlayer (ply)
         print('Setting a specialAbility')
         self:specialAbility(ply)
     end
+    print(self.loadout)
     if (self.loadout) then
         print('Setting the loadout')
         self:loadout(ply)
