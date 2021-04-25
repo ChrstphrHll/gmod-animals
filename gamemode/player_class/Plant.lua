@@ -29,8 +29,8 @@ end
 Flower = Plant.new({
     DisplayName = 'Flower',
     KarmaCost = 50,
-    GrowthTime = 3,
-    GrowthAmount = 1,
+    -- GrowthTime = 3,
+    -- GrowthAmount = 1,
     Playable = true
 })
 
@@ -54,4 +54,4 @@ OakTree = Plant.new({
     Playable = true
 })
 
-print(Plant.setPlayer)
+print(Flower.setPlayer)
