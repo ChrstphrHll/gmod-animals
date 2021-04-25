@@ -30,12 +30,12 @@ Animal = {
     UseVMHands = true
 }
 
---If a class wants to set extra things they would do so
---by overriding this function
-function Animal:extraSet(ply)
-    --fuction to set any extra parameters outside of baseanimal
+-- --If a class wants to set extra things they would do so
+-- --by overriding this function
+-- function Animal:extraSet(ply)
+--     --fuction to set any extra parameters outside of baseanimal
 
-end
+-- end
 
 --Each animal's special ability will be set by this function
 function Animal:specialAbility(forPlayer)
@@ -65,10 +65,15 @@ function Animal:setPlayer (ply)
     ply:SetModelScale( self.Size, 0 )
     timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function() self:handleKarma(ply) end)
 
-    self:extraSet(ply)
-    self:specialAbility(ply)
-    self:loadout(ply)
-
+    if (self.extraSet) then 
+        self:extraSet(ply)
+    end
+    if (self.specialAbility) then
+        self:specialAbility(ply)
+    end
+    if (self.loadout) then
+        self:loadout(ply)
+    end
 
     //TODO: add setting models
     //ply:SetModel(  )
@@ -76,22 +81,15 @@ function Animal:setPlayer (ply)
 end
 
 -- Currently this just kills the player but 
+-- is overridden by plants, who are immortal
 function Animal:handleKarma(ply)
-    -- print(ply:GetNWString( 'currentAnimal' ))
-    -- local hey = ply:GetNWInt('karma')
-    -- print(hey)
-    -- ply:SetNWInt('karma', hey + 10)
-    -- print("Subtracting karma")
-    -- ply:SetNWInt("karma", ply:GetNWInt("karma") - self.KarmaCost)
-    -- print("Remaining:")
-    -- print(ply:GetNWInt("karma"))
     ply:Kill()
 end 
 
---If an animal needs a weapon do it here
-function Animal:loadout (ply)
-    -- ply:Give("weapon_crossbow")
-end
+-- --If an animal needs a weapon do it here
+-- function Animal:loadout (ply)
+--     -- ply:Give("weapon_crossbow")
+-- end
 
 --Constructor for new Animal Classes
 function Animal:new (o)
