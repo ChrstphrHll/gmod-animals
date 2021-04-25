@@ -49,7 +49,7 @@ net.Receive("f4menu", function()
                 print('it cost this ' .. ImplementedAnimals[selected].KarmaCost)
                 local newKarma = plyCurrentKarma - ImplementedAnimals[selected].KarmaCost
                 print('you now have ' .. newKarma)
-                net.WriteUInt( plyCurrentKarma - ImplementedAnimals[selected].KarmaCost, 16 ) -- Max karma is 65,536
+                net.WriteUInt(newKarma, 16) -- Max karma is 65,536
                 net.WriteString(selected)
                 net.SendToServer()
                 Frame:Close()
