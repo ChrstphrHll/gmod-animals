@@ -37,16 +37,16 @@ Animal = {
 
 -- end
 
---Each animal's special ability will be set by this function
-function Animal:specialAbility(forPlayer)
-    print('oh you better belive im seeting a special ability')
-    hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )
-        if (button == 17 and forPlayer == ply) then --if player clicks 17
-            --add specific things to be done upon g press here
-            print( ply:Nick() .. " pressed " .. button )
-        end
-    end)
-end 
+-- --Each animal's special ability will be set by this function
+-- function Animal:specialAbility(forPlayer)
+--     print('oh you better belive im seeting a special ability')
+--     hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )
+--         if (button == 17 and forPlayer == ply) then --if player clicks 17
+--             --add specific things to be done upon g press here
+--             print( ply:Nick() .. " pressed " .. button )
+--         end
+--     end)
+-- end 
 
 --Called when a player spawns in, applies all of the animals
 --atributes to the player and starts the lifespan timer
