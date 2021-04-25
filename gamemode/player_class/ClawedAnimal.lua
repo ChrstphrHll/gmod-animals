@@ -2,7 +2,7 @@ include("FelineAnimal.lua")
 
 ClawedAnimal = Animal:new({DisplayName = 'Clawed'})
 
-function Animal:loadout (ply)
+function ClawedAnimal:loadout (ply)
     ply:Give("weapon_crowbar")
 end
 
