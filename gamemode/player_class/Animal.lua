@@ -27,9 +27,6 @@ Animal = {
     KarmaCost = 10,
     AbilityDescription = 'NA',
     Playable = false,
-    extraSet = nil,
-    specialAbility = nil,
-    loadout = nil,
     UseVMHands = true
 }
 
@@ -41,7 +38,7 @@ Animal = {
 -- end
 
 --Each animal's special ability will be set by this function
-function baseA(self, forPlayer)
+function Animal:specialAbility(forPlayer)
     print('oh you better belive im seeting a special ability')
     hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )
         if (button == 17 and forPlayer == ply) then --if player clicks 17
@@ -50,8 +47,6 @@ function baseA(self, forPlayer)
         end
     end)
 end 
-
-Animal.specialAbility = baseA
 
 --Called when a player spawns in, applies all of the animals
 --atributes to the player and starts the lifespan timer
@@ -78,7 +73,6 @@ function Animal:setPlayer (ply)
         print('Setting a specialAbility')
         self:specialAbility(ply)
     end
-    print(self.loadout)
     if (self.loadout) then
         print('Setting the loadout')
         self:loadout(ply)
