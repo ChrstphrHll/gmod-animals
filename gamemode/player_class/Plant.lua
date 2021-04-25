@@ -1,6 +1,8 @@
 include('ClawedAnimal.lua')
 
-Plant = Animal:new({DisplayName = 'Plant', Lifespan = 9999999, WalkSpeed = 0, RunSpeed = 0, GrowthTime = 10, GrowthAmount = 5})
+Plant = Animal:new({DisplayName = 'Plant', Lifespan = 9999999, WalkSpeed = 0, RunSpeed = 0})
+Plant.GrowthTime = 10 
+Plant.GrowthAmount = 5
 
 function Plant:extraSet(ply)
     timer.Create( ply:UserID() .. 'plantgen', self.GrowthTime, 0, function() self:handleKarma(ply) end)
