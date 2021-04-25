@@ -7,7 +7,7 @@ function Clawed:loadout (ply)
 end
 
 --ClawedFlyer = Clawed:derived(FlyingAnimal:derived({DisplayName = 'ClawedFlyer'}))
-ClawedFlyer = createClass(Clawed, FlyingAnimal)
+ClawedFlyer = createClass(FlyingAnimal, Clawed)
 
 Hawk = ClawedFlyer:new({
     DisplayName = 'Hawk',
