@@ -15,6 +15,9 @@ Hawk = ClawedFlyer:new({
     FlySpeed = '500'
 })
 
+for key,value in pairs(getmetatable(Hawk)) do
+    print(key, value)
+end
 Hawk.test()
 -- print(ClawedFlyer.loadout)
 -- print(ClawedFlyer.specialAbility)
