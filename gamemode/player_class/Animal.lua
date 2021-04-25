@@ -66,12 +66,15 @@ function Animal:setPlayer (ply)
     timer.Create( ply:UserID() .. 'lifespan', self.Lifespan, 1, function() self:handleKarma(ply) end)
 
     if (self.extraSet) then 
+        print('Setting a little something extra')
         self:extraSet(ply)
     end
     if (self.specialAbility) then
+        print('Setting a specialAbility')
         self:specialAbility(ply)
     end
     if (self.loadout) then
+        print('Setting the loadout')
         self:loadout(ply)
     end
 
