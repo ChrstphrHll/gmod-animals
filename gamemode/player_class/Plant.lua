@@ -54,4 +54,4 @@ OakTree = Plant.new({
     Playable = true
 })
 
-print('plants setPlayer: ' .. OakTree.setPlayer)
+print(Plant.setPlayer)
