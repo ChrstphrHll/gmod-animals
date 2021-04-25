@@ -8,12 +8,12 @@ end
 
 ClawedFlyer = Clawed:new(FlyingAnimal:new({DisplayName = 'ClawedFlyer'}))
 
--- Hawk = ClawedFlyer:new({
---     DisplayName = 'Hawk',
---     Playable = true,
---     KarmaCost = 74,
---     FlySpeed = '500'
--- })
+Hawk = ClawedFlyer:new({
+    DisplayName = 'Hawk',
+    Playable = true,
+    KarmaCost = 74,
+    FlySpeed = '500'
+})
 
-print(ClawedFlyer.loadout)
-print(ClawedFlyer.specialAbility)
+-- print(ClawedFlyer.loadout)
+-- print(ClawedFlyer.specialAbility)
