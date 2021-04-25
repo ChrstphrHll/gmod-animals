@@ -24,7 +24,7 @@ function lookatmetaof(o)
     end
 end
 
-lookatmetaof(Hawk)
+lookatmetaof(getmetatable(Hawk))
 
 Hawk.test()
 -- print(ClawedFlyer.loadout)
