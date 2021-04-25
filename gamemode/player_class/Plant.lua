@@ -26,7 +26,7 @@ function Plant:handleKarma(ply)
     PrintMessage( HUD_PRINTTALK, ply:Nick() .. " has gained" .. self.GrowthAmount .. " karma from being a " .. self.DisplayName .. "!" )
 end
 
-Flower = Plant.new({
+Flower = Plant:new({
     DisplayName = 'Flower',
     KarmaCost = 50,
     -- GrowthTime = 3,
@@ -34,7 +34,7 @@ Flower = Plant.new({
     Playable = true
 })
 
-Cactus = Plant.new({
+Cactus = Plant:new({
     DisplayName = 'Cactus',
     KarmaCost = 124,
     GrowthTime = 30,
@@ -46,7 +46,7 @@ function Cactus:loadout (ply)
     ply:Give("weapon_crossbow")
 end
 
-OakTree = Plant.new({
+OakTree = Plant:new({
     DisplayName = 'Oak Tree',
     KarmaCost = 500,
     GrowthTime = 60,
