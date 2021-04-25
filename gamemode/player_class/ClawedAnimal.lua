@@ -12,5 +12,8 @@ Hawk.KarmaCost = 74
 Hawk.DisplayName = 'Hawk'
 Hawk.FlySpeed = '500'
 
+print(Hawk)
+
+
 -- Hawk = ClawedAnimal:new(FlyingAnimal:new({DisplayName = 'Hawk', FlySpeed = '500'}))
 -- Hawk.Playable = true
