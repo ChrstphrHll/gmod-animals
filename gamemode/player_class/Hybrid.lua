@@ -12,7 +12,9 @@ function createClass (...)
     -- class will search for each method in the list of its
     -- parents (`arg' is the list of parents)
     setmetatable(c, {__index = function (t, k)
-        return search(k, arg)
+        local v = search(k, arg)
+        t[k] = v       -- save for next access
+        return v
     end})
 
     -- prepare `c' to be the metatable of its instances
