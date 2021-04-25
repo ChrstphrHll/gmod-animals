@@ -1,6 +1,6 @@
 include('Animal.lua')
 
-FlyingAnimal = Animal:new({DisplayName = 'FlyingAni', FlySpeed = 500})
+FlyingAnimal = Animal:derived({DisplayName = 'FlyingAni', FlySpeed = 500})
 
 function FlyingAnimal:specialAbility(forPlayer)
     hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )

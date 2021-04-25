@@ -1,5 +1,3 @@
-
-
 --Table that will contain all of our various classes
 --Constructor adds them automatically
 ImplementedAnimals = {}
@@ -104,6 +102,15 @@ function Animal:new (o)
     ImplementedAnimals[o.DisplayName] = o
     print('added ' .. o.DisplayName .. 'to the table')
     return o
+end
+
+function Animal:derived(o)
+    local new_class = o or {}
+    local class_mt = { __index = new_class }
+
+    setmetatable( new_class, { __index = self } )
+
+    return new_class
 end
 
 --Starting animal
