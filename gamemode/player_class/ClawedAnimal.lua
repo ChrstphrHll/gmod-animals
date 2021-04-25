@@ -15,9 +15,17 @@ Hawk = ClawedFlyer:new({
     FlySpeed = '500'
 })
 
-for key,value in pairs(getmetatable(Hawk)) do
-    print(key, value)
+function lookatmetaof(o)
+    for key,value in pairs(getmetatable(o)) do
+        print(key, value)
+        if key == '__index' then
+            lookatmetaof(o)
+        end
+    end
 end
+
+lookatmetaof(Hawk)
+
 Hawk.test()
 -- print(ClawedFlyer.loadout)
 -- print(ClawedFlyer.specialAbility)
