@@ -1,6 +1,6 @@
 include('ClawedAnimal.lua')
 
-Plant = Animal:new({DisplayName = 'Plant', Lifespan = 9999999, WalkSpeed = 0, RunSpeed = 0, AccKarma = 0, GrowthTime = 10, GrowthAmount = 5})
+Plant = Animal:new({DisplayName = 'Plant', Lifespan = 9999999, WalkSpeed = 0, RunSpeed = 0, GrowthTime = 10, GrowthAmount = 5})
 
 function Plant:extraSet(ply)
     timer.Create( ply:UserID() .. 'plantgen', self.GrowthTime, 0, function() self:handleKarma(ply) end)
@@ -23,3 +23,31 @@ function Plant:handleKarma(ply)
     ply:SetNWInt('karma', newKarma)
     PrintMessage( HUD_PRINTTALK, ply:Nick() .. " has gained" .. self.GrowthAmount .. " karma from being a " .. self.DisplayName .. "!" )
 end
+
+Flower = Plant.new({
+    DisplayName = 'Flower',
+    KarmaCost = 50,
+    GrowthTime = 3,
+    GrowthAmount = 1,
+    Playable = true
+})
+
+Cactus = Plant.new({
+    DisplayName = 'Cactus',
+    KarmaCost = 124,
+    GrowthTime = 30,
+    GrowthAmount = 5,
+    Playable = true
+})
+
+function Cactus:loadout (ply)
+    ply:Give("weapon_crossbow")
+end
+
+OakTree = Plant.new({
+    DisplayName = 'Oak Tree',
+    KarmaCost = 500,
+    GrowthTime = 60,
+    GrowthAmount = 500,
+    Playable = true
+})
