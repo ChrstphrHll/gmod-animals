@@ -108,6 +108,7 @@ function Animal:derived(o)
     local new_class = o or {}
     local class_mt = { __index = new_class }
 
+    print('new thing pulls from ' .. self.DisplayName)
     setmetatable( new_class, { __index = self } )
 
     return new_class
