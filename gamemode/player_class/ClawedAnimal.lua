@@ -1,12 +1,12 @@
 include("FelineAnimal.lua")
 include("Hybrid.lua")
 
-Clawed = Animal:new({DisplayName = 'Clawed'})
+Clawed = Animal:derived({DisplayName = 'Clawed'})
 function Clawed:loadout (ply)
     ply:Give("weapon_crowbar")
 end
 
-ClawedFlyer = Clawed:new(FlyingAnimal:new({DisplayName = 'ClawedFlyer'}))
+ClawedFlyer = Clawed:derived(FlyingAnimal:derived({DisplayName = 'ClawedFlyer'}))
 
 Hawk = ClawedFlyer:new({
     DisplayName = 'Hawk',

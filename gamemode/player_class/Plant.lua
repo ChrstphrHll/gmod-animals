@@ -1,6 +1,6 @@
 include('ClawedAnimal.lua')
 
-Plant = Animal:new({DisplayName = 'Plant', Lifespan = 9999999, WalkSpeed = 0, RunSpeed = 0})
+Plant = Animal:derived({DisplayName = 'Plant', Lifespan = 9999999, WalkSpeed = 0, RunSpeed = 0})
 Plant.GrowthTime = 10 
 Plant.GrowthAmount = 5
 

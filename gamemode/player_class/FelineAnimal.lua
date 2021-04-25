@@ -1,6 +1,6 @@
 include('FlyingAnimal.lua')
 
-FelineAnimal = Animal:new({DisplayName = 'FelineAni', Lifespan = 20})
+FelineAnimal = Animal:derived({DisplayName = 'FelineAni', Lifespan = 20})
 
 function FelineAnimal:specialAbility(forPlayer)
     hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )
