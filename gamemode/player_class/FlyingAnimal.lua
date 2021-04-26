@@ -47,12 +47,15 @@ Alien = FlyingAnimal:new({
 
 function Alien:specialAbility(forPlayer)
     hook.Add( "PlayerButtonDown", "Special" .. forPlayer:Nick(), function( ply, button )
+        -- Key I: go up
         if (button == 19 and forPlayer == ply) then
             ply:SetVelocity(Vector(0,0,self.FlySpeed))
         end
+        -- Key K: go down
         if (button == 21 and forPlayer == ply) then
             ply:SetVelocity(Vector(0,0,-self.FlySpeed/2))
         end
+        -- Key G: dash in given direction (all three of x, y, and z)
         if (button == 17 and forPlayer == ply) then
             currentVector = ply:GetAimVector()
             newVector = Vector(currentVector.x * self.Pounce, currentVector.y * self.Pounce, currentVector.z * self.Pounce)
