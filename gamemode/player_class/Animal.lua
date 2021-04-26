@@ -8,6 +8,7 @@ Animal = {
     DisplayName = 'Animal',
     WalkSpeed = 400,
     RunSpeed = 600,
+    CrouchedWalkSpeed = 0.3,
     JumpPower = 200,
     MaxHealth = 100,
     StartHealth = 100,
