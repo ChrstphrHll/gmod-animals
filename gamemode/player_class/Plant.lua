@@ -1,4 +1,4 @@
-include('ClawedAnimal.lua')
+include("FelineAnimal.lua")
 
 Plant = Animal:derived({
     DisplayName = 'Plant', 
@@ -38,20 +38,6 @@ Flower = Plant:new({
     GrowthAmount = 1,
     Playable = true
 })
-
-function makeSpiked(Animal)
-    Animal.loadout = 'weapon_crossbow'
-end
-
-Cactus = Plant:new({
-    DisplayName = 'Cactus',
-    KarmaCost = 124,
-    GrowthTime = 30,
-    GrowthAmount = 5,
-    Playable = true
-})
-
-makeSpiked(Cactus)
 
 OakTree = Plant:new({
     DisplayName = 'Oak Tree',
