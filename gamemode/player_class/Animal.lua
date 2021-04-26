@@ -74,8 +74,8 @@ function Animal:setPlayer (ply)
         ply:Give(self.loadout)
     end
 
-    //TODO: add setting models
-    //ply:SetModel(  )
+--     //TODO: add setting models
+--     //ply:SetModel(  )
 
 end
 
