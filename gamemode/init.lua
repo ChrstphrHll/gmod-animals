@@ -42,8 +42,8 @@ end
 --Recieves communication about class change selections
 util.AddNetworkString( "ClientClassInfo" )
  
-net.Receive( "ClientClassInfo", function( len, ply ) -- len is the net message length, which we don't care about, ply is the player who sent it.
-    local karma = net.ReadUInt( 16 ) -- Notice how ReadUInt requires an argument. This is the second argument of WriteUInt, which tells us how big the number is.
+net.Receive( "ClientClassInfo", function( len, ply ) 
+    local karma = net.ReadUInt( 32 ) 
     PrintMessage( HUD_PRINTTALK, ply:Nick() .. " now has " .. karma .. " karma!" )
     ply:SetNWInt('karma', karma)
 

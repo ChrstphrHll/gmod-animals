@@ -38,10 +38,12 @@ Cactus = Plant:new({
 
 makeSpiked(Cactus)
 
+-- Gmod won't let us use glua functions in lambdas 
 function makeImmortal(Animal)
-    Animal.extraSet = function(ply)
-        timer.Remove(ply:UserID() .. 'lifespan')
-    end
+    -- Animal.extraSet = function(ply)
+    --     timer.Remove(ply:UserID() .. 'lifespan')
+    -- end
+    Animal.lifespan = 999999999
 end
 
 Admin = Plant:new({
