@@ -41,7 +41,10 @@ local client = LocalPlayer()
     draw.RoundedBox(0,0, ScrH() - 200, 250, 90, Color(30,30,30,150))
     draw.SimpleText("Current Animal: " .. client:GetNWString('currentAnimal'), "DermaDefaultBold", 10, ScrH() - 190, Color(5,255,255,255), 0, 0)
     draw.SimpleText("Current Karma: " .. client:GetNWInt('karma'), "DermaDefaultBold", 10, ScrH() - 180, Color(5,255,255,255), 0, 0)
-    
+
+    -- display useful info
+    animal = ImplementedAnimals[client:GetNWString("currentAnimal")]
+    draw.SimpleText("Lifespan (seconds): " .. animal:getLifespan(), "DermaDefaultBold", 10, ScrH() - 170, Color(5,255,255,255), 0, 0)
 
 end
 hook.Add("HUDPaint","TestHud",HUD)

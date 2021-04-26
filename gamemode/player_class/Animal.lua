@@ -83,7 +83,11 @@ end
 -- is overridden by plants, who are immortal
 function Animal:handleKarma(ply)
     ply:Kill()
-end 
+end
+
+function Animal:getLifespan()
+    return self.Lifespan
+end
 
 --Constructor for new Animal Classes
 function Animal:new (o)
