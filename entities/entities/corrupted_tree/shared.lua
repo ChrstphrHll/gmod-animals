@@ -2,7 +2,7 @@ ENT.Type = "anim"
 ENT.Base = "base_gmodentity"
 ENT.Category = "Buildings"
 
-ENT.Model = "models/props_lab/reciever_cart.mdl"
+ENT.Model = "models/props_foliage/tree_springers_01a.mdl"
 
 ENT.BaseHealth = 20
 ENT.KarmaBonus = 100

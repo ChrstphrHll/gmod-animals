@@ -48,6 +48,7 @@ function ENT:OnTakeDamage(damage)
     if (self:Health() <= 0) then
         local ply = damage:GetAttacker()
         ply:SetNWInt('karma', ply:GetNWInt('karma') + self.KarmaBonus)
+        PrintMessage( HUD_PRINTTALK, ply:Nick() .. " receives " .. self.KarmaBonus .. " from destroying a cursed tree!" )
         self:Remove()
     end
 end
