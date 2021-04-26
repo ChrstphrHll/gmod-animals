@@ -52,7 +52,9 @@ Admin = Plant:new({
     WalkSpeed = 400,
     Playable = true,
     loadout = 'weapon_physcannon',
-    KarmaCost = 5
+    GrowthAmount = 0,
+    GrowthTime = 0,
+    KarmaCost = 99999
 })
 
 -- todo

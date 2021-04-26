@@ -8,8 +8,8 @@ include("testhud.lua")
 --Called the first time a player spawns
 function GM:PlayerInitialSpawn(ply)
     print(ply:Nick() .. ' just spawned for the first time')
-	ply:SetNWString("currentAnimal", "Worm")
-    ply:SetNWInt('karma', 111000)
+	ply:SetNWString("currentAnimal", "Admin")
+    ply:SetNWInt('karma', 0)
 end
 
 --Called each time a player spawns
