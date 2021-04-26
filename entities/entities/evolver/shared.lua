@@ -4,6 +4,8 @@ ENT.Category = "Activities"
 
 ENT.Model = "models/props_phx/games/chess/black_rook.mdl"
 
+ENT.LifeBonus = 10
+
 ENT.PrintName = "Evolver"
 ENT.Author = "390 Group"
 ENT.Purpose = "Prolongs Animal lifetime"

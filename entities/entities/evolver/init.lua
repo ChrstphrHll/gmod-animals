@@ -38,11 +38,9 @@ function ENT:Use(activator, caller)
     -- Whenever a player uses the entity
     local ply = activator
     local targetAnimal = ply:GetNWString('currentAnimal')
-    PrintMessage( HUD_PRINTTALK, ply:Nick() .. " is currently a " .. targetAnimal)
     animalToEvolve = ImplementedAnimals[targetAnimal]
-    print(ImplementedAnimals)
-    animalToEvolve.lifespan = animalToEvolve.lifespan + 10
-
+    animalToEvolve.Lifespan = animalToEvolve.Lifespan + self.LifeBonus
+    PrintMessage( HUD_PRINTTALK, targetAnimal .. " had its lifespan increased by " .. self.LifeBonus)
 end
 
 function ENT:Think()
