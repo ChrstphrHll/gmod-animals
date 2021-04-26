@@ -5,10 +5,11 @@ function makeClawed(Animal)
     Animal.loadout = function(ply) ply:Give("weapon_crowbar") end
 end
 
-ClawedFlyer = FlyingAnimal:derived({DisplayName = 'ClawedFlyer'}))
+ClawedFlyer = FlyingAnimal:derived({DisplayName = 'ClawedFlyer'})
 makeClawed(ClawedFlyer)
 
 ClawedFeline = FelineAnimal:derived({DisplayName = 'ClawedFeline'})
+makeClawed(ClawedFeline)
 
 Hawk = ClawedFlyer:new({
     DisplayName = 'Hawk',
