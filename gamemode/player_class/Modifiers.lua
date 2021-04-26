@@ -44,7 +44,7 @@ function makeImmortal(Animal)
     end
 end
 
-Admin = Plant:derived({
+Admin = Plant:new({
     DisplayName = 'Admin',
     RunSpeed = 600,
     WalkSpeed = 400,
