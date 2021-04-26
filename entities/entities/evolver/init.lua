@@ -40,6 +40,7 @@ function ENT:Use(activator, caller)
     local targetAnimal = ply:GetNWString('currentAnimal')
     PrintMessage( HUD_PRINTTALK, ply:Nick() .. " is currently a " .. targetAnimal)
     animalToEvolve = ImplementedAnimals[targetAnimal]
+    print(ImplementedAnimals)
     animalToEvolve.lifespan = animalToEvolve.lifespan + 10
 
 end
