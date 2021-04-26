@@ -51,6 +51,7 @@ Admin = Plant:new({
     RunSpeed = 600,
     WalkSpeed = 400,
     Playable = true,
+    loadout = 'weapon_physcannon',
     KarmaCost = 5
 })
 
