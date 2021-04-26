@@ -45,6 +45,10 @@ function ENT:Use(activator, caller)
         end)
     end
 
+    function animalToSet:getAbilityDescription()
+        return "Respawn immediately."
+    end
+
     animalToSet:setPlayer(activator)
 end
 
