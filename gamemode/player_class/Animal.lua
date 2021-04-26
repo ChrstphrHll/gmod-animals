@@ -8,24 +8,14 @@ Animal = {
     DisplayName = 'Animal',
     WalkSpeed = 400,
     RunSpeed = 600,
-    CrouchedWalkSpeed = 0.3,
-    DuckSpeed = 0.3,
-    UnDuckSpeed = 0.3,
     JumpPower = 200,
-    CanUseFlashlight = false,
     MaxHealth = 100,
-    MaxArmor = 0,
     StartHealth = 100,
-    StartArmor = 0,
-    DropWeaponOnDie = false,
-    TeammateNoCollide = true,
-    AvoidPlayers = true,
     Lifespan = 10,
     Size = 1,
     KarmaCost = 10,
     AbilityDescription = 'NA',
-    Playable = false,
-    UseVMHands = true
+    Playable = false
 }
 
 -- --If a class wants to set extra things they would do so
@@ -57,7 +47,6 @@ function Animal:setPlayer (ply)
     ply:SetWalkSpeed(self.WalkSpeed)
     ply:SetJumpPower(self.JumpPower)
     ply:SetCrouchedWalkSpeed(self.CrouchedWalkSpeed)
-    ply:SetDuckSpeed(self.DuckSpeed)
 
     --ply:SetNWString('currentAnimal', self.DisplayName)
     ply:SetModelScale( self.Size, 0 )
