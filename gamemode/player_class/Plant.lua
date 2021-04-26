@@ -31,6 +31,10 @@ function Plant:handleKarma(ply)
     PrintMessage( HUD_PRINTTALK, ply:Nick() .. " has gained" .. self.GrowthAmount .. " karma from being a " .. self.DisplayName .. "!" )
 end
 
+function Plant:getAbilityDescription()
+    return "Respawn immediately."
+end
+
 Flower = Plant:new({
     DisplayName = 'Flower',
     KarmaCost = 50,

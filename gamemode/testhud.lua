@@ -45,6 +45,7 @@ local client = LocalPlayer()
     -- display useful info
     animal = ImplementedAnimals[client:GetNWString("currentAnimal")]
     draw.SimpleText("Lifespan (seconds): " .. animal:getLifespan(), "DermaDefaultBold", 10, ScrH() - 170, Color(5,255,255,255), 0, 0)
+    draw.SimpleText("Special Ability (click g): " .. animal:getAbilityDescription(), "DermaDefaultBold", 10, ScrH() - 160, Color(5,255,255,255), 0, 0)
 
 end
 hook.Add("HUDPaint","TestHud",HUD)

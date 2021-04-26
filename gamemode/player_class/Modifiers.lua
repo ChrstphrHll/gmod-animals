@@ -54,4 +54,6 @@ Admin = Plant:new({
     KarmaCost = 5
 })
 
+-- todo
+
 makeImmortal(Admin)

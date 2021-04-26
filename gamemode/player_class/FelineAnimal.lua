@@ -14,6 +14,10 @@ function FelineAnimal:specialAbility(forPlayer)
     end)
 end
 
+function FelineAnimal:getAbilityDescription()
+    return "Jump first then pounce forwards."
+end
+
 CatAnimal = FelineAnimal:new({
     DisplayName = 'Cat',
     Pounce = 200,

@@ -10,7 +10,11 @@ function FlyingAnimal:specialAbility(forPlayer)
             ply:SetVelocity(Vector(0,0,self.FlySpeed))
         end
     end)
-end 
+end
+
+function FlyingAnimal:getAbilityDescription()
+    return "I can fly!"
+end
 
 function FlyingAnimal:test()
     print('this is flyinganimals test')

@@ -89,6 +89,10 @@ function Animal:getLifespan()
     return self.Lifespan
 end
 
+function Animal:getAbilityDescription()
+    return "None"
+end
+
 --Constructor for new Animal Classes
 function Animal:new (o)
     o = o or {}
