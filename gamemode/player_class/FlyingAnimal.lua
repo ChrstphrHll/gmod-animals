@@ -16,15 +16,11 @@ function FlyingAnimal:getAbilityDescription()
     return "I can fly!"
 end
 
-function FlyingAnimal:test()
-    print('this is flyinganimals test')
-end
-
 ButterFly = FlyingAnimal:new({
     DisplayName = 'Butterfly',
-    WalkSpeed = 1000,
-    RunSpeed = 250,
-    FlySpeed = 1000,
+    WalkSpeed = 100,
+    RunSpeed = 200,
+    FlySpeed = 275,
     Size = 0.1,
     Playable = true,
     KarmaCost = 24

@@ -37,7 +37,7 @@ net.Receive("f4menu", function()
         Button:SetText( 'Select Animal and Respawn' )
         Button:SetTextColor( Color(255,255,255) )
         Button:SetPos( 100, 100 )
-        Button:SetSize( 100, 30 )
+        Button:SetSize( 150, 30 )
         Button.Paint = function( self, w, h )
             draw.RoundedBox( 0, 0, 0, w, h, Color( 41, 128, 185, 250 ) ) -- Draw a blue button
         end
