@@ -1,8 +1,13 @@
 include('ClawedAnimal.lua')
 
-Plant = Animal:derived({DisplayName = 'Plant', Lifespan = 9999999, WalkSpeed = 0, RunSpeed = 0})
-Plant.GrowthTime = 10 
-Plant.GrowthAmount = 5
+Plant = Animal:derived({
+    DisplayName = 'Plant', 
+    Lifespan = 9999999, 
+    WalkSpeed = 0.1, 
+    RunSpeed = 0.1,
+    GrowthTime = 10,
+    GrowthAmount = 5
+})
 
 function Plant:extraSet(ply)
     timer.Create( ply:UserID() .. 'plantgen', self.GrowthTime, 0, function() self:handleKarma(ply) end)
@@ -29,8 +34,8 @@ end
 Flower = Plant:new({
     DisplayName = 'Flower',
     KarmaCost = 50,
-    -- GrowthTime = 3,
-    -- GrowthAmount = 1,
+    GrowthTime = 3,
+    GrowthAmount = 1,
     Playable = true
 })
 
