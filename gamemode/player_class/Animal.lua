@@ -75,7 +75,7 @@ function Animal:setPlayer (ply)
     end
     if (self.loadout) then
         print('Setting the loadout')
-        self:loadout(ply)
+        ply:Give(self.loadout)
     end
 
     //TODO: add setting models
@@ -88,11 +88,6 @@ end
 function Animal:handleKarma(ply)
     ply:Kill()
 end 
-
--- --If an animal needs a weapon do it here
--- function Animal:loadout (ply)
---     -- ply:Give("weapon_crossbow")
--- end
 
 --Constructor for new Animal Classes
 function Animal:new (o)

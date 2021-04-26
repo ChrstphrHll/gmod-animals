@@ -34,6 +34,10 @@ Flower = Plant:new({
     Playable = true
 })
 
+function makeSpiked(Animal)
+    Animal.loadout = 'weapon_crossbow'
+end
+
 Cactus = Plant:new({
     DisplayName = 'Cactus',
     KarmaCost = 124,
@@ -42,9 +46,7 @@ Cactus = Plant:new({
     Playable = true
 })
 
-function Cactus:loadout (ply)
-    ply:Give("weapon_crossbow")
-end
+makeSpiked(Cactus)
 
 OakTree = Plant:new({
     DisplayName = 'Oak Tree',
