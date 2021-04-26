@@ -49,7 +49,7 @@ Admin = Plant:derived({
     RunSpeed = 600,
     WalkSpeed = 400,
     Playable = true,
-    KarmaCost = 63000
+    KarmaCost = 5
 })
 
 makeImmortal(Admin)
